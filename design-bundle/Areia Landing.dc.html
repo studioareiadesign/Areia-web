@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&amp;family=Playfair+Display:ital,wght@1,500;1,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; }
+@keyframes causticDrift { 0% { transform: translate(0,0) scale(1); } 50% { transform: translate(3%,-4%) scale(1.08); } 100% { transform: translate(0,0) scale(1); } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+a { color: #6d0000; text-decoration: none; }
+a:hover { color: #4d0000; }
+input, textarea { font-family: 'Inter', sans-serif; }
+input::placeholder, textarea::placeholder { color: rgba(26,26,26,.4); }
+</style>
+</helmet>
+<div style="font-family:'Inter',sans-serif; background:#E4E2DD; color:#1A1A1A; overflow-x:hidden; width:100%;">
+
+  <header style="position:sticky; top:0; z-index:50; background:#E4E2DD; display:flex; align-items:center; justify-content:space-between; padding:14px clamp(20px,5vw,64px); border-bottom:1px solid rgba(109,0,0,.12);">
+    <img src="logo-on-cream.svg" alt="Areia Design Studio" style="height:38px; width:auto; display:block;">
+    <a href="#contacto" style="font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:#E4E2DD; background:#6d0000; padding:12px 26px; border-radius:999px; transition:transform .25s ease, box-shadow .25s ease;" style-hover="transform:scale(1.05); box-shadow:0 8px 20px rgba(109,0,0,.25);">Quiero mi landing page</a>
+  </header>
+
+  <section data-screen-label="Hero" style="position:relative; background:#E4E2DD; color:#1A1A1A; min-height:88vh; display:flex; flex-direction:column; justify-content:center; padding:clamp(60px,8vw,120px) clamp(20px,6vw,80px); overflow:hidden;">
+    <img src="uploads/Hero-landing.png" alt="" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:right center; z-index:0;">
+    <div style="position:absolute; inset:0; background:linear-gradient(90deg, #E4E2DD 0%, #E4E2DD 38%, rgba(228,226,221,0) 62%); z-index:0;"></div>
+    <div style="position:relative; z-index:1; max-width:480px; display:flex; flex-direction:column; gap:28px; animation:fadeUp .9s ease-out both;">
+      <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#6d0000;">Areia Design Studio · Panamá</span>
+      <div style="display:grid;">
+        <h1 style="grid-area:1/1; font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(40px,7vw,84px); line-height:1.05; margin:0; text-wrap:pretty; opacity:{{ slideOpacity.headline }}; transition:opacity .8s ease;">Tu oferta merece <span style="font-family:'Playfair Display',serif; font-style:italic; font-weight:600; color:#6d0000;">más</span> que un link en la bio.</h1>
+        <p style="grid-area:1/1; align-self:center; font-family:'Playfair Display',serif; font-style:italic; font-weight:500; font-size:clamp(26px,3.6vw,44px); line-height:1.25; margin:0; text-wrap:pretty; color:#6d0000; opacity:{{ slideOpacity.subheadline }}; transition:opacity .8s ease;">Diseñamos landing pages que convierten visitantes en oportunidades reales</p>
+      </div>
+      <div style="display:flex; align-items:center; gap:14px;">
+        <sc-for list="{{ dots }}" as="dot" hint-placeholder-count="2">
+          <span onClick="{{ dot.onClick }}" style="width:{{ dot.width }}; height:8px; border-radius:999px; background:{{ dot.bg }}; cursor:pointer; transition:width .3s ease, background .3s ease;"></span>
+        </sc-for>
+      </div>
+      <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap; margin-top:8px;">
+        <a href="#contacto" style="font-family:'Archivo',sans-serif; font-weight:800; font-size:16px; color:#E4E2DD; background:#6d0000; padding:18px 40px; border-radius:999px; transition:transform .3s ease, box-shadow .3s ease; display:inline-block;" style-hover="transform:scale(1.05); box-shadow:0 14px 32px rgba(109,0,0,.3);">Quiero mi landing page</a>
+      </div>
+      <p style="font-family:'Archivo',sans-serif; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:rgba(26,26,26,.6); margin:0;">Entrega en 7 días · Desde $150 · Diseño 100% personalizado</p>
+    </div>
+    
+  </section>
+
+  <section data-screen-label="Problema" style="position:relative; background:#E4E2DD; padding:clamp(60px,10vw,140px) clamp(20px,6vw,80px);">
+    <div style="max-width:820px; margin:0 auto; display:flex; flex-direction:column; gap:36px;">
+      
+      <h2 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(32px,5vw,56px); margin:0; text-wrap:pretty;">¿Te suena familiar?</h2>
+      <div style="display:flex; flex-direction:column; gap:0;">
+        <sc-for list="{{ agitacionItems }}" as="item" hint-placeholder-count="4">
+          <div style="display:flex; gap:18px; align-items:flex-start; border-top:1px solid rgba(109,0,0,.15); padding:20px 0;">
+            <span style="font-family:'Playfair Display',serif; font-style:italic; font-size:20px; color:#6d0000; flex-shrink:0;">{{ item.n }}</span>
+            <p style="font-size:clamp(17px,1.8vw,19px); line-height:1.55; margin:0;">{{ item.text }}</p>
+          </div>
+        </sc-for>
+      </div>
+      <p style="font-family:'Playfair Display',serif; font-style:italic; font-weight:600; font-size:clamp(22px,2.8vw,28px); color:#6d0000; margin:8px 0 0; text-wrap:pretty;">No es que tu oferta sea mala. Es que no tiene un lugar diseñado para convertir.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="El giro" style="position:relative; background:#E4E2DD; color:#1A1A1A; padding:clamp(60px,10vw,140px) clamp(20px,6vw,80px); overflow:hidden;">
+    <div style="position:absolute; inset:0; background:radial-gradient(circle at 80% 70%, rgba(109,0,0,.06), transparent 55%); animation:causticDrift 20s ease-in-out infinite; pointer-events:none;"></div>
+    <div style="position:relative; max-width:820px; margin:0 auto; display:flex; flex-direction:column; gap:28px;">
+      
+      <h2 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(30px,4.6vw,52px); margin:0; text-wrap:pretty;">No necesitas un sitio web. Necesitas <span style="font-family:'Playfair Display',serif; font-style:italic; color:#6d0000;">UNA página</span> que funcione.</h2>
+      <p style="font-size:clamp(17px,1.9vw,20px); line-height:1.6; color:rgba(26,26,26,.75); margin:0;">Un sitio web completo toma semanas, cuesta miles de dólares y muchas veces es más de lo que tu lanzamiento necesita. Una landing page bien diseñada hace el trabajo real: comunica tu oferta con claridad y convierte visitantes en clientes en 7 días, no en 7 semanas.</p>
+      <p style="font-family:'Playfair Display',serif; font-style:italic; font-weight:600; font-size:clamp(22px,2.8vw,28px); color:#6d0000; margin:0;">Eso es lo que hacemos. Diseño con propósito.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Qué incluye" style="position:relative; background:#E4E2DD; padding:clamp(60px,10vw,140px) clamp(20px,6vw,80px);">
+    <div style="max-width:900px; margin:0 auto; display:flex; flex-direction:column; gap:36px;">
+      
+      <h2 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(32px,5vw,52px); margin:0; text-wrap:pretty;">Todo lo que necesitas. Nada que no necesites.</h2>
+      <div>
+        <sc-for list="{{ includeItems }}" as="row" hint-placeholder-count="5">
+          <div style="display:grid; grid-template-columns:minmax(180px,1fr) 1.6fr; gap:24px; padding:22px 0; border-top:1px solid rgba(109,0,0,.15);">
+            <span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:18px;">{{ row.q }}</span>
+            <span style="font-size:16px; color:rgba(26,26,26,.7); line-height:1.5;">{{ row.a }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="color: #6d0000; border-radius: 24px; padding: clamp(24px,4vw,40px); text-align: center; background-color: #1A1A1A">
+        <p style="font-family: 'Playfair Display',serif; font-style: italic; font-size: clamp(20px,2.4vw,26px); margin: 0; text-wrap: pretty; color: #E4E2DD">El resultado: una página diseñada para convertir visitantes en oportunidades.</p>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;">
+        <div style="display:flex; align-items:baseline; gap:14px; flex-wrap:wrap;">
+          <span style="font-family: 'Archivo',sans-serif; font-weight: 900; font-size: clamp(36px,5vw,56px); color: #6d0000; width: 357px; height: 55px">Desde $150</span>
+          
+        </div>
+        <a href="#contacto" style="font-family:'Archivo',sans-serif; font-weight:800; font-size:16px; color:#E4E2DD; background:#6d0000; padding:18px 40px; border-radius:999px; transition:transform .3s ease, box-shadow .3s ease; display:inline-block;" style-hover="transform:scale(1.05); box-shadow:0 14px 32px rgba(109,0,0,.35);">Quiero mi landing page</a>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section data-screen-label="Proceso" style="position:relative; background:#E4E2DD; padding:clamp(60px,10vw,140px) clamp(20px,6vw,80px);">
+    <div style="max-width:1080px; margin:0 auto; display:flex; flex-direction:column; gap:44px;">
+      
+      <h2 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(30px,4.4vw,48px); margin:0; text-wrap:pretty;">Trabajamos con un proceso claro, transparente y sin pasos innecesarios</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:32px;">
+        <sc-for list="{{ steps }}" as="step" hint-placeholder-count="4">
+          <div style="display:flex; flex-direction:column; gap:12px; border-top:1px solid rgba(109,0,0,.2); padding-top:20px;">
+            <span style="font-family:'Playfair Display',serif; font-style:italic; font-size:36px; color:#6d0000;">{{ step.n }}</span>
+            <span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:18px;">{{ step.t }}</span>
+            <span style="font-size:15px; line-height:1.5; color:rgba(26,26,26,.7);">{{ step.d }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <p style="font-size:17px; line-height:1.6; max-width:700px; margin:0;">Pagas la mitad al empezar, la mitad cuando estás conforme. Sin sorpresas. <span style="font-family:'Playfair Display',serif; font-style:italic; font-weight:600; color:#6d0000;">7 días hábiles de principio a fin. Sin letra pequeña.</span></p>
+    </div>
+  </section>
+
+  <section data-screen-label="Objeciones" style="position:relative; background:#F7F5F1; padding:clamp(60px,10vw,140px) clamp(20px,6vw,80px);">
+    <div style="max-width:820px; margin:0 auto; display:flex; flex-direction:column; gap:36px;">
+      <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#6d0000;">PREGUNTAS FRECUENTES</span>
+      <div style="display:flex; flex-direction:column;">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="4">
+          <div style="border-top:1px solid rgba(109,0,0,.18); padding:24px 0;">
+            <div onClick="{{ f.toggle }}" style="display:flex; align-items:center; justify-content:space-between; gap:20px; cursor:pointer;">
+              <span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(17px,2vw,20px);">{{ f.q }}</span>
+              <span style="flex-shrink:0; font-family:'Archivo',sans-serif; font-weight:800; font-size:22px; color:#6d0000; transition:transform .3s ease; transform:rotate({{ f.iconRotate }});">+</span>
+            </div>
+            <div style="overflow:hidden; max-height:{{ f.maxHeight }}; opacity:{{ f.opacity }}; transition:max-height .4s ease, opacity .4s ease;">
+              <p style="font-size:16px; line-height:1.6; color:rgba(26,26,26,.75); margin:16px 0 0; max-width:680px;">{{ f.a }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Urgencia" style="position:relative; background:#E4E2DD; color:#1A1A1A; padding:clamp(60px,10vw,140px) clamp(20px,6vw,80px); overflow:hidden;">
+    <div style="position:absolute; inset:0; background:radial-gradient(circle at 70% 30%, rgba(109,0,0,.06), transparent 55%); animation:causticDrift 19s ease-in-out infinite; pointer-events:none;"></div>
+    <div style="position:relative; max-width:820px; margin:0 auto; display:flex; flex-direction:column; gap:24px;">
+      
+      <h2 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(30px,4.6vw,50px); margin:0; text-wrap:pretty;">Cada día sin una página clara, es un cliente que se va con otro.</h2>
+      <p style="font-size:clamp(17px,1.9vw,20px); line-height:1.6; color:rgba(26,26,26,.75); margin:0;">Tu oferta ya existe. Tu producto ya está listo. Lo único que falta es el lugar donde la gente diga que sí. Mientras más esperas para tener eso, más oportunidades dejas sobre la mesa.</p>
+      <p style="font-family:'Playfair Display',serif; font-style:italic; font-weight:600; font-size:clamp(19px,2.2vw,22px); color:#6d0000; margin:8px 0 0;">Trabajamos con 3 proyectos por mes para poder dar atención real a cada uno. Si este mes hay espacio, es tuyo.</p>
+    </div>
+  </section>
+
+  <section id="contacto" data-screen-label="Contacto" style="position:relative; background:#E4E2DD; padding:clamp(60px,10vw,140px) clamp(20px,6vw,80px);">
+    <div style="max-width:920px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:56px;">
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        
+        <h2 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(30px,4.4vw,46px); margin:0; text-wrap:pretty;">Tu oferta ya está lista. Ahora dale el lugar que merece.</h2>
+        <p style="font-family:'Playfair Display',serif; font-style:italic; font-weight:600; font-size:clamp(19px,2.2vw,23px); color:#6d0000; margin:0;">Una página. Un objetivo. Resultados en 7 días.</p>
+        <p style="font-size:14px; letter-spacing:.04em; color:rgba(26,26,26,.6); margin:0; text-transform:uppercase;">Sin compromiso · 30 minutos · Te escuchamos primero</p>
+      </div>
+      <sc-if value="{{ !formSubmitted }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ handleSubmit }}" style="display:flex; flex-direction:column; gap:22px;">
+          <input type="text" placeholder="Nombre" required="{{ true }}" style="border:none; border-bottom:2px solid rgba(26,26,26,.2); background:transparent; padding:12px 0; font-size:16px; color:#1A1A1A; outline:none; transition:border-color .25s ease;" style-focus="border-color:#6d0000;">
+          <input type="tel" placeholder="Teléfono" required="{{ true }}" style="border:none; border-bottom:2px solid rgba(26,26,26,.2); background:transparent; padding:12px 0; font-size:16px; color:#1A1A1A; outline:none; transition:border-color .25s ease;" style-focus="border-color:#6d0000;">
+          <input type="text" placeholder="¿Qué quieres lanzar o promocionar?" style="border:none; border-bottom:2px solid rgba(26,26,26,.2); background:transparent; padding:12px 0; font-size:16px; color:#1A1A1A; outline:none; transition:border-color .25s ease;" style-focus="border-color:#6d0000;">
+          <button type="submit" style="align-self:flex-start; font-family:'Archivo',sans-serif; font-weight:800; font-size:16px; color:#E4E2DD; background:#6d0000; padding:18px 40px; border-radius:999px; border:none; cursor:pointer; transition:transform .3s ease, box-shadow .3s ease;" style-hover="transform:scale(1.05); box-shadow:0 14px 32px rgba(109,0,0,.3);">Agenda tu reunión inicial gratuita</button>
+        </form>
+      </sc-if>
+      <sc-if value="{{ formSubmitted }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex; flex-direction:column; gap:12px; justify-content:center;">
+          <span style="font-family:'Playfair Display',serif; font-style:italic; font-weight:600; font-size:24px; color:#6d0000;">¡Gracias!</span>
+          <p style="font-size:16px; line-height:1.6; color:rgba(26,26,26,.75); margin:0;">Recibimos tu información. Te escribiremos pronto para agendar tu reunión inicial.</p>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <footer style="background:#1A1A1A; color:rgba(228,226,221,.7); display:flex; flex-direction:column; align-items:center; gap:20px; padding:clamp(40px,6vw,64px) clamp(20px,6vw,80px);">
+    <img src="logo-on-black.svg" alt="Areia Design Studio" style="height:34px; width:auto;">
+    <span style="font-size:13px; letter-spacing:.08em; text-transform:uppercase;">Panamá</span>
+    <span style="font-size:13px;">© 2026 Areia Design Studio — Diseño con propósito.</span>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { openFaq: null, formSubmitted: false, heroSlide: 0 };
+
+  componentDidMount() {
+    this._heroTimer = setInterval(() => {
+      this.setState((s) => ({ heroSlide: s.heroSlide === 0 ? 1 : 0 }));
+    }, 4500);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this._heroTimer);
+  }
+
+  goToHeroSlide = (i) => {
+    clearInterval(this._heroTimer);
+    this.setState({ heroSlide: i });
+    this._heroTimer = setInterval(() => {
+      this.setState((s) => ({ heroSlide: s.heroSlide === 0 ? 1 : 0 }));
+    }, 4500);
+  };
+
+  toggleFaq = (i) => this.setState((s) => ({ openFaq: s.openFaq === i ? null : i }));
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.setState({ formSubmitted: true });
+  };
+
+  renderVals() {
+
+    const agitacionItems = [
+      { n: '01.', text: 'Tienes un lanzamiento, promoción o servicio nuevo y no tienes dónde mandar a la gente que dice "sí, quiero más info"' },
+      { n: '02.', text: 'Tu Instagram genera curiosidad, pero no conversión — la gente ve, no actúa' },
+      { n: '03.', text: 'Mandaste a alguien a "escríbenos por WhatsApp" y lo perdiste en el camino' },
+      { n: '04.', text: 'Cotizaste un sitio web completo cuando en realidad solo necesitabas UNA página bien hecha' }
+    ];
+
+    const includeItems = [
+      { q: 'Diseño 100% personalizado', a: 'Nada de plantillas recicladas. Tu marca, tu tono' },
+      { q: 'Información estructurada', a: 'Que se entienda en segundos, no en párrafos' },
+      { q: 'Llamados a la acción estratégicos', a: 'Diseñados para generar clics, no solo decorar' },
+      { q: 'Formulario de contacto integrado', a: 'Los leads llegan directo a ti, sin fricción' },
+      { q: 'Adaptación completa a móvil', a: 'Porque la mayoría de tu tráfico llega desde el celular' }
+    ];
+
+    const valores = ['Creatividad sin límites', 'Diseñar es chill', 'Organización impecable', 'Tecnología con propósito', 'Paciencia real', 'Honestidad siempre', 'Somos nosotras — auténticas', 'Curiosidad', 'Compromiso'];
+
+    const steps = [
+      { n: '01', t: 'Reunión inicial', d: '30 min, sin costo — nos cuentas tu objetivo' },
+      { n: '02', t: 'Diseño y estructura', d: 'Armamos tu página con tu marca y tu mensaje' },
+      { n: '03', t: 'Revisión', d: 'Ajustamos hasta 2 rondas incluidas' },
+      { n: '04', t: 'Entrega final', d: 'Tu landing lista para recibir visitantes' }
+    ];
+
+    const faqData = [
+      { q: '¿$150 no es muy poco para algo tan importante?', a: 'Es justo lo contrario, es un precio pensado para que probar con nosotras no sea la decisión difícil. El valor no está en lo que cobramos, está en lo rápido que empiezas a convertir visitantes en clientes.' },
+      { q: '¿Y si no me gusta el resultado?', a: 'Incluye 2 rondas de revisión antes de la entrega final. Tú apruebas antes de que sea definitivo.' },
+      { q: '¿Sirve para mi tipo de negocio?', a: 'Si tienes algo que promocionar — un lanzamiento, una promoción, un servicio, un evento — esto es para ti. Trabajamos con cafeterías, spas, boutiques, gimnasios, agencias de viaje, freelancers, y negocios como el tuyo todos los días.' },
+      { q: '¿Y si después necesito algo más grande?', a: '¡Perfecto! Esta landing puede ser tu primer paso. Cuando estés listo para más, seguimos creciendo juntos.' }
+    ];
+
+    const faqs = faqData.map((f, i) => {
+      const open = this.state.openFaq === i;
+      return { ...f, open, toggle: () => this.toggleFaq(i), iconRotate: open ? '45deg' : '0deg', maxHeight: open ? '260px' : '0px', opacity: open ? 1 : 0 };
+    });
+
+    const slideOpacity = {
+      headline: this.state.heroSlide === 0 ? 1 : 0,
+      subheadline: this.state.heroSlide === 1 ? 1 : 0
+    };
+    const dots = [0, 1].map((i) => ({
+      onClick: () => this.goToHeroSlide(i),
+      bg: this.state.heroSlide === i ? '#6d0000' : 'rgba(109,0,0,.25)',
+      width: this.state.heroSlide === i ? '28px' : '8px'
+    }));
+
+    return {
+      agitacionItems,
+      includeItems,
+      valores,
+      steps,
+      faqs,
+      formSubmitted: this.state.formSubmitted,
+      handleSubmit: this.handleSubmit,
+      slideOpacity,
+      dots
+    };
+  }
+}
+</script>
+</body>
+</html>
