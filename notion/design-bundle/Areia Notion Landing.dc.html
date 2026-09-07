@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f%5B%5D=general-sans@400,500,600,700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #E4E2DD; -webkit-font-smoothing: antialiased; }
+  a { color: #6d0000; text-decoration: none; }
+  a:hover { color: #1A1A1A; }
+  ::selection { background: #FFEDA8; color: #1A1A1A; }
+  input, textarea, select, button { font-family: inherit; }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] [data-plus] { transform: rotate(45deg); }
+  details[open] [data-answer] { animation: fadeUp .5s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+  @keyframes floatA { 0%,100% { transform: translate3d(0,0,0) rotate(0deg); } 50% { transform: translate3d(0,-14px,0) rotate(-.6deg); } }
+  @keyframes floatB { 0%,100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,18px,0); } }
+  @keyframes sweep { 0% { transform: translateX(-140%) skewX(-18deg); } 100% { transform: translateX(240%) skewX(-18deg); } }
+  @keyframes drawLine { from { stroke-dashoffset: 1400; } to { stroke-dashoffset: 0; } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes caustic { 0%,100% { opacity: .5; transform: translateX(-2%) scaleY(1); } 50% { opacity: .9; transform: translateX(2%) scaleY(1.08); } }
+</style>
+</helmet>
+
+<div style="font-family: 'General Sans', Helvetica, sans-serif; color: #1A1A1A; background: #E4E2DD; overflow-x: hidden;">
+
+  <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px clamp(20px, 4vw, 64px); background: rgba(228,226,221,.82); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(26,26,26,.08);">
+    <a href="#top" style="display: flex; align-items: center; gap: 12px;">
+      <img src="assets/logo-bordeaux-on-cream.svg" alt="Areia" style="height: 26px; display: block;">
+      <span style="font-size: 11px; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; color: #1A1A1A;">Areia Design Studio</span>
+    </a>
+    <a href="#contacto" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 10px; background: #1A1A1A; color: #E4E2DD; padding: 11px 22px; border-radius: 999px; font-size: 13px; font-weight: 600; letter-spacing: .01em;" style-hover="background: #6d0000; color: #E4E2DD;">
+      Agenda tu reunión
+      <span style="width: 5px; height: 5px; border-radius: 50%; background: #FFEDA8;"></span>
+    </a>
+  </header>
+
+  <section id="top" style="position: relative; padding: clamp(120px, 16vh, 190px) clamp(20px, 4vw, 64px) clamp(60px, 8vh, 110px); overflow: hidden;">
+    <div style="position: absolute; inset: 0; pointer-events: none; opacity: .5;">
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="none" style="width: 100%; height: 100%; display: block;">
+        <g fill="none" stroke="#1A1A1A" stroke-width="1" opacity=".28">
+          <path d="M -100 640 Q 240 560 520 640 T 1140 640 T 1640 600" style="animation: caustic 11s ease-in-out infinite;"></path>
+          <path d="M -100 690 Q 260 610 540 690 T 1160 690 T 1660 650" style="animation: caustic 13s ease-in-out infinite .6s;"></path>
+          <path d="M -100 742 Q 280 662 560 742 T 1180 742 T 1680 702" style="animation: caustic 15s ease-in-out infinite 1.2s;"></path>
+        </g>
+        <circle cx="1180" cy="180" r="150" fill="none" stroke="#6d0000" stroke-width="1" opacity=".35"></circle>
+        <circle cx="1180" cy="180" r="96" fill="none" stroke="#6d0000" stroke-width="1" opacity=".22"></circle>
+      </svg>
+    </div>
+
+    <div style="position: relative; max-width: 1240px; margin: 0 auto;">
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: clamp(28px, 5vh, 56px);">
+        
+        <span style="width: 44px; height: 1px; background: rgba(26,26,26,.3);"></span>
+        
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(24px, 5vw, 72px); align-items: center; position: relative">
+        <div style="position: relative">
+          <h1 style="margin: 0; font-size: clamp(40px, 5.6vw, 88px); line-height: .96; letter-spacing: -.035em; font-weight: 700; text-wrap: balance; width: 731px; height: 425px">
+            Deja de manejar tu negocio desde <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; letter-spacing: -.01em; color: #6d0000;">notas sueltas</span> y chats de WhatsApp.
+          </h1>
+          <p style="margin: clamp(24px, 3vh, 40px) 0 0; max-width: 620px; font-size: clamp(17px, 1.5vw, 21px); line-height: 1.55; color: rgba(26,26,26,.72);">
+            Organizamos tu gestión financiera o el control de tu equipo. Claro, práctico y diseñado para que realmente lo uses.
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: clamp(28px, 4vh, 48px);">
+            <a href="#contacto" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 12px; background: #6d0000; color: #FFEDA8; padding: 18px 34px; border-radius: 999px; font-size: 16px; font-weight: 600; letter-spacing: .005em;" style-hover="background: #1A1A1A;">
+              Quiero mi sistema organizado
+              <span style="position: absolute; top: 0; bottom: 0; width: 40%; background: linear-gradient(90deg, transparent, rgba(255,237,168,.28), transparent); animation: sweep 3.6s ease-in-out infinite;"></span>
+            </a>
+            <a href="https://wa.me/507" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(26,26,26,.28); color: #1A1A1A; padding: 17px 30px; border-radius: 999px; font-size: 15px; font-weight: 500;" style-hover="border-color: #6d0000; color: #6d0000;">
+              Escríbenos por WhatsApp
+            </a>
+          </div>
+
+          <p style="margin: 22px 0 0; font-size: 13px; letter-spacing: .06em; color: rgba(26,26,26,.55);">
+            Entrega en 7 días · Desde $75 · El mismo sistema que usamos internamente
+          </p>
+        </div>
+
+        <div style="position: relative; min-height: clamp(300px, 44vh, 460px);">
+          
+          
+        <img src="assets/draw-walk-dark.png" alt="" style="position: absolute; left: -66px; width: 219px; animation: floatB 11s ease-in-out infinite; top: 252px; height: 286px"></div>
+      <img src="assets/draw-table-dark.png" alt="" style="position: absolute; top: -62px; width: 329px; animation: floatA 9s ease-in-out infinite; left: 755px; height: 282px"></div>
+    </div>
+  </section>
+
+  <section style="position: relative; background: #1A1A1A; color: #E4E2DD; padding: clamp(80px, 12vh, 150px) clamp(20px, 4vw, 64px); overflow: hidden;">
+    <img src="assets/draw-walk-light.png" alt="" style="position: absolute; right: clamp(-40px, -2vw, 0px); bottom: 6%; width: clamp(150px, 18vw, 290px); opacity: .5; animation: floatB 13s ease-in-out infinite;">
+    <div style="max-width: 1240px; margin: 0 auto; position: relative;">
+      
+
+      <h2 data-reveal="" style="margin: 0 0 clamp(40px, 7vh, 80px); font-size: clamp(34px, 4.4vw, 68px); line-height: 1; letter-spacing: -.03em; font-weight: 700;">
+        ¿Te suena <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; color: #FFEDA8;">familiar?</span>
+      </h2>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(32px, 5vw, 80px);">
+        <div data-reveal="">
+          <p style="margin: 0 0 26px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; color: #FFEDA8;">Si es tus finanzas</p>
+          <div style="display: grid; gap: 20px;">
+            <div style="display: grid; grid-template-columns: 22px 1fr; gap: 14px; padding-bottom: 20px; border-bottom: 1px solid rgba(228,226,221,.14);">
+              <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: rgba(228,226,221,.5);">i</span>
+              <p style="margin: 0; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.5; color: rgba(228,226,221,.86);">No tienes un lugar centralizado para ver cuánto entra, cuánto sale y qué te queda</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 22px 1fr; gap: 14px; padding-bottom: 20px; border-bottom: 1px solid rgba(228,226,221,.14);">
+              <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: rgba(228,226,221,.5);">ii</span>
+              <p style="margin: 0; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.5; color: rgba(228,226,221,.86);">Manejas tus números en hojas sueltas, notas o memoria — y a veces ni tú confías en esos números</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 22px 1fr; gap: 14px;">
+              <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: rgba(228,226,221,.5);">iii</span>
+              <p style="margin: 0; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.5; color: rgba(228,226,221,.86);">Te cuesta saber, sin sentarte a calcular, si el mes va bien o va mal</p>
+            </div>
+          </div>
+        </div>
+
+        <div data-reveal="">
+          <p style="margin: 0 0 26px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; color: #D2E8FF;">Si es tu equipo</p>
+          <div style="display: grid; gap: 20px;">
+            <div style="display: grid; grid-template-columns: 22px 1fr; gap: 14px; padding-bottom: 20px; border-bottom: 1px solid rgba(228,226,221,.14);">
+              <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: rgba(228,226,221,.5);">i</span>
+              <p style="margin: 0; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.5; color: rgba(228,226,221,.86);">Las tareas se pierden entre chats de WhatsApp, notas y mensajes de voz</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 22px 1fr; gap: 14px; padding-bottom: 20px; border-bottom: 1px solid rgba(228,226,221,.14);">
+              <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: rgba(228,226,221,.5);">ii</span>
+              <p style="margin: 0; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.5; color: rgba(228,226,221,.86);">No hay un lugar donde todos vean qué está pasando y quién es responsable de qué</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 22px 1fr; gap: 14px;">
+              <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: rgba(228,226,221,.5);">iii</span>
+              <p style="margin: 0; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.5; color: rgba(228,226,221,.86);">Sientes que repites las mismas instrucciones porque nada queda documentado</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p data-reveal="" style="margin: clamp(48px, 8vh, 96px) 0 0; max-width: 780px; font-family: 'Playfair Display', serif; font-size: clamp(21px, 2.2vw, 34px); line-height: 1.35; color: #E4E2DD;">
+        No es que no sepas organizarte. Es que no tienes el sistema correcto para hacerlo <span style="font-style: italic; color: #FFEDA8;">sin que te tome horas cada semana.</span>
+      </p>
+    </div>
+  </section>
+
+  <section style="position: relative; padding: clamp(80px, 12vh, 150px) clamp(20px, 4vw, 64px); overflow: hidden;">
+    <div style="max-width: 1240px; margin: 0 auto;">
+      
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(32px, 6vw, 90px); align-items: start;">
+        <h2 data-reveal="" style="margin: 0; font-size: clamp(30px, 3.6vw, 54px); line-height: 1.05; letter-spacing: -.03em; font-weight: 700; text-wrap: pretty;">
+          No tiene que ser complicado. Lo diseñamos a tu medida y para que sea <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; color: #6d0000;">fácil de usar.</span>
+        </h2>
+        <div data-reveal="">
+          <p style="margin: 0; font-size: clamp(16px, 1.4vw, 20px); line-height: 1.6; color: rgba(26,26,26,.75);">
+            Una buena herramienta puede hacer mucho más cuando está adaptada a la forma en que realmente trabajas. La configuramos y personalizamos según las necesidades de tu negocio, para que sea clara, práctica y fácil de incorporar a tu día a día.
+          </p>
+          <div style="display: flex; gap: 18px; align-items: flex-start; margin-top: 34px; padding-top: 30px; border-top: 1px solid rgba(26,26,26,.16);">
+            <svg viewBox="0 0 60 60" style="width: 46px; height: 46px; flex: none;">
+              <circle cx="30" cy="30" r="28" fill="none" stroke="#6d0000" stroke-width="1"></circle>
+              <path d="M 8 34 Q 20 22 30 34 T 52 34" fill="none" stroke="#6d0000" stroke-width="1" style="animation: caustic 8s ease-in-out infinite;"></path>
+            </svg>
+            <p style="margin: 0; font-size: clamp(17px, 1.5vw, 22px); line-height: 1.45; font-weight: 600; letter-spacing: -.015em;">
+              Por eso no te damos una plantilla. Te armamos un sistema hecho para cómo trabajas tú.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="position: relative; padding: 0 clamp(20px, 4vw, 64px) clamp(80px, 12vh, 140px);">
+    <div style="max-width: 1240px; margin: 0 auto;">
+      
+
+      <h2 data-reveal="" style="margin: 0 0 clamp(36px, 6vh, 64px); max-width: 900px; font-size: clamp(30px, 3.6vw, 54px); line-height: 1.05; letter-spacing: -.03em; font-weight: 700;">
+        Un sistema completo, <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400;">no una plantilla descargada</span>
+      </h2>
+
+      <div data-reveal="" style="display: grid; grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1.1fr); gap: 0 clamp(16px, 3vw, 48px); padding-bottom: 14px; border-bottom: 1px solid #1A1A1A;">
+        <span></span>
+        <span style="font-size: 11px; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; color: rgba(26,26,26,.55);">Qué recibes</span>
+        <span style="font-size: 11px; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; color: rgba(26,26,26,.55);">Por qué importa</span>
+      </div>
+
+      <div data-reveal="" style="display: grid; grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1.1fr); gap: 0 clamp(16px, 3vw, 48px); align-items: baseline; padding: clamp(20px, 3vh, 30px) 0; border-bottom: 1px solid rgba(26,26,26,.16);" style-hover="background: rgba(255,237,168,.35);">
+        <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: #6d0000;">01</span>
+        <span style="font-size: clamp(18px, 1.7vw, 25px); font-weight: 600; letter-spacing: -.02em;">Organización de la información</span>
+        <span style="font-size: clamp(15px, 1.2vw, 18px); line-height: 1.5; color: rgba(26,26,26,.7);">Todo en un solo lugar, sin dispersión</span>
+      </div>
+      <div data-reveal="" style="display: grid; grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1.1fr); gap: 0 clamp(16px, 3vw, 48px); align-items: baseline; padding: clamp(20px, 3vh, 30px) 0; border-bottom: 1px solid rgba(26,26,26,.16);" style-hover="background: rgba(255,237,168,.35);">
+        <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: #6d0000;">02</span>
+        <span style="font-size: clamp(18px, 1.7vw, 25px); font-weight: 600; letter-spacing: -.02em;">Creación de bases de datos</span>
+        <span style="font-size: clamp(15px, 1.2vw, 18px); line-height: 1.5; color: rgba(26,26,26,.7);">Tus finanzas o tareas estructuradas, no sueltas</span>
+      </div>
+      <div data-reveal="" style="display: grid; grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1.1fr); gap: 0 clamp(16px, 3vw, 48px); align-items: baseline; padding: clamp(20px, 3vh, 30px) 0; border-bottom: 1px solid rgba(26,26,26,.16);" style-hover="background: rgba(255,237,168,.35);">
+        <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: #6d0000;">03</span>
+        <span style="font-size: clamp(18px, 1.7vw, 25px); font-weight: 600; letter-spacing: -.02em;">Diseño de dashboards</span>
+        <span style="font-size: clamp(15px, 1.2vw, 18px); line-height: 1.5; color: rgba(26,26,26,.7);">Ves el estado real de tu negocio o equipo de un vistazo</span>
+      </div>
+      <div data-reveal="" style="display: grid; grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1.1fr); gap: 0 clamp(16px, 3vw, 48px); align-items: baseline; padding: clamp(20px, 3vh, 30px) 0; border-bottom: 1px solid rgba(26,26,26,.16);" style-hover="background: rgba(255,237,168,.35);">
+        <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: #6d0000;">04</span>
+        <span style="font-size: clamp(18px, 1.7vw, 25px); font-weight: 600; letter-spacing: -.02em;">Automatización de procesos</span>
+        <span style="font-size: clamp(15px, 1.2vw, 18px); line-height: 1.5; color: rgba(26,26,26,.7);">Menos trabajo manual repetitivo cada semana</span>
+      </div>
+      <div data-reveal="" style="display: grid; grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1.1fr); gap: 0 clamp(16px, 3vw, 48px); align-items: baseline; padding: clamp(20px, 3vh, 30px) 0; border-bottom: 1px solid rgba(26,26,26,.16);" style-hover="background: rgba(255,237,168,.35);">
+        <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: #6d0000;">05</span>
+        <span style="font-size: clamp(18px, 1.7vw, 25px); font-weight: 600; letter-spacing: -.02em;">Personalización según tu negocio</span>
+        <span style="font-size: clamp(15px, 1.2vw, 18px); line-height: 1.5; color: rgba(26,26,26,.7);">Hecho para cómo trabajas tú, no una plantilla genérica</span>
+      </div>
+
+      <div data-reveal="" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(28px, 4vw, 60px); align-items: center; margin-top: clamp(40px, 6vh, 72px);">
+        <p style="margin: 0; font-family: 'Playfair Display', serif; font-size: clamp(19px, 1.9vw, 28px); line-height: 1.4;">
+          <span style="font-style: italic; color: #6d0000;">El resultado:</span> un espacio organizado que facilita la gestión, el seguimiento y el control de tus operaciones.
+        </p>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 18px;">
+          <span style="display: inline-flex; align-items: center; gap: 12px; background: #FFEDA8; color: #1A1A1A; padding: 10px 20px; border-radius: 999px; font-size: 14px; font-weight: 600; letter-spacing: .04em;">$75 – $100 · Entrega en 7 días</span>
+          <a href="#contacto" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 12px; background: #1A1A1A; color: #E4E2DD; padding: 18px 34px; border-radius: 999px; font-size: 16px; font-weight: 600;" style-hover="background: #6d0000; color: #FFEDA8;">
+            Quiero mi sistema organizado
+            <span style="position: absolute; top: 0; bottom: 0; width: 40%; background: linear-gradient(90deg, transparent, rgba(228,226,221,.22), transparent); animation: sweep 4.2s ease-in-out infinite;"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="position: relative; background: #1A1A1A; color: #E4E2DD; padding: clamp(80px, 12vh, 150px) clamp(20px, 4vw, 64px); overflow: hidden;">
+    <img src="assets/draw-table-light.png" alt="" style="position: absolute; left: clamp(-60px, -3vw, 0px); bottom: 4%; width: clamp(180px, 22vw, 340px); opacity: .42; animation: floatA 12s ease-in-out infinite;">
+    <div style="max-width: 1240px; margin: 0 auto; position: relative;">
+      <div data-reveal="" style="display: flex; align-items: center; gap: 14px; margin-bottom: clamp(28px, 5vh, 56px);">
+        <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 14px; color: #FFEDA8;"><br></span>
+        <span style="width: 44px; height: 1px; background: rgba(228,226,221,.3);"></span>
+        <span style="font-size: 11px; letter-spacing: .24em; text-transform: uppercase; font-weight: 600; color: rgba(228,226,221,.6);"><br></span>
+      </div>
+
+      <h2 data-reveal="" style="margin: 0 0 clamp(36px, 6vh, 64px); font-size: clamp(30px, 3.8vw, 58px); line-height: 1.02; letter-spacing: -.03em; font-weight: 700;">
+        No es teoría. Es <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; color: #FFEDA8;">experiencia aplicada.</span>
+      </h2>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(32px, 5vw, 72px); align-items: start;">
+        <blockquote data-reveal="" style="margin: 0; padding-left: clamp(20px, 3vw, 34px); border-left: 1px solid rgba(255,237,168,.5); font-size: clamp(17px, 1.6vw, 23px); line-height: 1.55; color: rgba(228,226,221,.9);">
+          Diseñamos sistemas pensados para el uso real de cada negocio. Partimos de cómo trabajas, qué necesitas organizar y qué quieres simplificar para construir una solución práctica, clara y hecha a tu medida.
+        </blockquote>
+
+        <div data-reveal="" style="display: grid; gap: 16px;">
+          <div style="position: relative; aspect-ratio: 16 / 10; border: 1px solid rgba(228,226,221,.28); border-radius: 6px; overflow: hidden; background: #101010;">
+            <video src="assets/notion-1.mp4" autoplay="" muted="" loop="" playsinline="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: blur(1.1px) saturate(.97); transform: scale(1.02);"></video>
+            <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(26,26,26,0), rgba(26,26,26,.34));"></div>
+            <span style="position: absolute; left: 14px; bottom: 14px; display: inline-flex; align-items: center; gap: 8px; background: rgba(26,26,26,.7); backdrop-filter: blur(4px); color: #FFEDA8; padding: 7px 14px; border-radius: 999px; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; font-weight: 600;">
+              <span style="width: 4px; height: 4px; border-radius: 50%; background: #FFEDA8;"></span>Sistema real · datos difuminados
+            </span>
+          </div>
+          
+          <p style="margin: 0; font-size: 13px; line-height: 1.55; color: rgba(228,226,221,.5);">Fragmentos de sistemas entregados a clientes. El contenido se muestra difuminado por confidencialidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="position: relative; padding: clamp(80px, 12vh, 150px) clamp(20px, 4vw, 64px);">
+    <div style="max-width: 1240px; margin: 0 auto;">
+      <div data-reveal="" style="display: flex; align-items: center; gap: 14px; margin-bottom: clamp(28px, 5vh, 56px);">
+        
+        <span style="width: 44px; height: 1px; background: rgba(26,26,26,.3);"></span>
+        
+      </div>
+
+      <h2 data-reveal="" style="margin: 0 0 clamp(40px, 7vh, 76px); font-size: clamp(30px, 3.8vw, 58px); line-height: 1.02; letter-spacing: -.03em; font-weight: 700;">
+        Así de simple es <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; color: #6d0000;">el proceso</span>
+      </h2>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(28px, 3vw, 44px);">
+        <div data-reveal="" style="padding-top: 22px; border-top: 1px solid rgba(26,26,26,.5);">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 16px;">
+            <span style="font-size: clamp(30px, 3vw, 44px); font-weight: 700; letter-spacing: -.04em; color: #6d0000;">01</span>
+            <svg viewBox="0 0 40 40" style="width: 30px; height: 30px; flex: none;"><circle cx="20" cy="20" r="18" fill="none" stroke="#1A1A1A" stroke-width="1" opacity=".35"></circle></svg>
+          </div>
+          <h3 style="margin: 0 0 10px; font-size: clamp(18px, 1.5vw, 22px); font-weight: 600; letter-spacing: -.02em;">Reunión inicial</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: rgba(26,26,26,.7);">Conocemos tu negocio, cómo trabajas hoy y qué necesitas mejorar para definir juntos qué debería resolver el sistema.</p>
+        </div>
+        <div data-reveal="" style="padding-top: 22px; border-top: 1px solid rgba(26,26,26,.5);">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 16px;">
+            <span style="font-size: clamp(30px, 3vw, 44px); font-weight: 700; letter-spacing: -.04em; color: #6d0000;">02</span>
+            <svg viewBox="0 0 40 40" style="width: 30px; height: 30px; flex: none;"><rect x="4" y="4" width="32" height="32" fill="none" stroke="#1A1A1A" stroke-width="1" opacity=".35"></rect></svg>
+          </div>
+          <h3 style="margin: 0 0 10px; font-size: clamp(18px, 1.5vw, 22px); font-weight: 600; letter-spacing: -.02em;">Diseño del sistema</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: rgba(26,26,26,.7);">Organizamos la información, bases de datos y dashboards de acuerdo con cómo funciona tu negocio, para que todo esté en un mismo lugar y sea fácil de consultar.</p>
+        </div>
+        <div data-reveal="" style="padding-top: 22px; border-top: 1px solid rgba(26,26,26,.5);">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 16px;">
+            <span style="font-size: clamp(30px, 3vw, 44px); font-weight: 700; letter-spacing: -.04em; color: #6d0000;">03</span>
+            <svg viewBox="0 0 40 40" style="width: 30px; height: 30px; flex: none;"><path d="M 4 26 Q 14 12 24 26 T 44 26" fill="none" stroke="#1A1A1A" stroke-width="1" opacity=".35"></path></svg>
+          </div>
+          <h3 style="margin: 0 0 10px; font-size: clamp(18px, 1.5vw, 22px); font-weight: 600; letter-spacing: -.02em;">Automatización y ajustes</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: rgba(26,26,26,.7);">Simplificamos las tareas repetitivas y configuramos el sistema para que trabajar con él sea más ágil y práctico.</p>
+        </div>
+        <div data-reveal="" style="padding-top: 22px; border-top: 1px solid rgba(26,26,26,.5);">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 16px;">
+            <span style="font-size: clamp(30px, 3vw, 44px); font-weight: 700; letter-spacing: -.04em; color: #6d0000;">04</span>
+            <svg viewBox="0 0 40 40" style="width: 30px; height: 30px; flex: none;"><path d="M 6 20 L 20 6 L 34 20 L 20 34 Z" fill="none" stroke="#1A1A1A" stroke-width="1" opacity=".35"></path></svg>
+          </div>
+          <h3 style="margin: 0 0 10px; font-size: clamp(18px, 1.5vw, 22px); font-weight: 600; letter-spacing: -.02em;">Entrega y explicación</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: rgba(26,26,26,.7);">Te mostramos cómo usarlo, para que desde el día uno ya sepas moverte.</p>
+        </div>
+      </div>
+
+      <p data-reveal="" style="margin: clamp(40px, 6vh, 72px) 0 0; font-size: clamp(20px, 2.2vw, 32px); font-weight: 700; letter-spacing: -.03em;">
+        7 días. <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; color: #6d0000;">Un sistema que realmente vas a usar.</span>
+      </p>
+    </div>
+  </section>
+
+  <section style="padding: 0 clamp(20px, 4vw, 64px) clamp(80px, 12vh, 140px);">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <div data-reveal="" style="display: flex; align-items: center; gap: 14px; margin-bottom: clamp(24px, 4vh, 44px);">
+        
+        <span style="width: 44px; height: 1px; background: rgba(26,26,26,.3);"></span>
+        
+      </div>
+
+      <details data-reveal="" style="border-top: 1px solid rgba(26,26,26,.5);">
+        <summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: clamp(20px, 3vh, 28px) 0; font-size: clamp(17px, 1.5vw, 22px); font-weight: 600; letter-spacing: -.02em;">
+          ¿Cómo sé que este sistema realmente se va a adaptar a mi forma de trabajar?
+          <span data-plus="" style="flex: none; width: 22px; height: 22px; position: relative; transition: transform .35s cubic-bezier(.2,.7,.2,1);">
+            <span style="position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: #6d0000;"></span>
+            <span style="position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: #6d0000;"></span>
+          </span>
+        </summary>
+        <p data-answer="" style="margin: 0; padding: 0 0 clamp(22px, 3vh, 30px); max-width: 76ch; font-size: clamp(15px, 1.2vw, 18px); line-height: 1.6; color: rgba(26,26,26,.72);">Porque una solución genérica no siempre responde a la forma en que realmente funciona cada negocio. Diseñamos el sistema específicamente para tus procesos, necesidades y equipo, para que sea intuitivo, práctico y fácil de incorporar al día a día.</p>
+      </details>
+      <details data-reveal="" style="border-top: 1px solid rgba(26,26,26,.16);">
+        <summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: clamp(20px, 3vh, 28px) 0; font-size: clamp(17px, 1.5vw, 22px); font-weight: 600; letter-spacing: -.02em;">
+          ¿Necesito saber usar la herramienta para esto?
+          <span data-plus="" style="flex: none; width: 22px; height: 22px; position: relative; transition: transform .35s cubic-bezier(.2,.7,.2,1);">
+            <span style="position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: #6d0000;"></span>
+            <span style="position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: #6d0000;"></span>
+          </span>
+        </summary>
+        <p data-answer="" style="margin: 0; padding: 0 0 clamp(22px, 3vh, 30px); max-width: 76ch; font-size: clamp(15px, 1.2vw, 18px); line-height: 1.6; color: rgba(26,26,26,.72);">Te entregamos el sistema listo y te explicamos cómo moverte en él. No necesitas experiencia previa.</p>
+      </details>
+      <details data-reveal="" style="border-top: 1px solid rgba(26,26,26,.16);">
+        <summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: clamp(20px, 3vh, 28px) 0; font-size: clamp(17px, 1.5vw, 22px); font-weight: 600; letter-spacing: -.02em;">
+          ¿Esto sirve si mi equipo es pequeño o solo somos 2-3 personas?
+          <span data-plus="" style="flex: none; width: 22px; height: 22px; position: relative; transition: transform .35s cubic-bezier(.2,.7,.2,1);">
+            <span style="position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: #6d0000;"></span>
+            <span style="position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: #6d0000;"></span>
+          </span>
+        </summary>
+        <p data-answer="" style="margin: 0; padding: 0 0 clamp(22px, 3vh, 30px); max-width: 76ch; font-size: clamp(15px, 1.2vw, 18px); line-height: 1.6; color: rgba(26,26,26,.72);">En equipos pequeños, tener toda la información organizada en un solo lugar puede marcar una gran diferencia: menos tiempo buscando, más claridad y una operación más fluida.</p>
+      </details>
+      <details data-reveal="" style="border-top: 1px solid rgba(26,26,26,.16);">
+        <summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: clamp(20px, 3vh, 28px) 0; font-size: clamp(17px, 1.5vw, 22px); font-weight: 600; letter-spacing: -.02em;">
+          ¿Puedo pedir finanzas Y equipo, o tengo que elegir uno?
+          <span data-plus="" style="flex: none; width: 22px; height: 22px; position: relative; transition: transform .35s cubic-bezier(.2,.7,.2,1);">
+            <span style="position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: #6d0000;"></span>
+            <span style="position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: #6d0000;"></span>
+          </span>
+        </summary>
+        <p data-answer="" style="margin: 0; padding: 0 0 clamp(22px, 3vh, 30px); max-width: 76ch; font-size: clamp(15px, 1.2vw, 18px); line-height: 1.6; color: rgba(26,26,26,.72);">El servicio base cubre uno de los dos; si necesitas ambos, lo hablamos en la reunión inicial y ajustamos el alcance.</p>
+      </details>
+      <details data-reveal="" style="border-top: 1px solid rgba(26,26,26,.16); border-bottom: 1px solid rgba(26,26,26,.16);">
+        <summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: clamp(20px, 3vh, 28px) 0; font-size: clamp(17px, 1.5vw, 22px); font-weight: 600; letter-spacing: -.02em;">
+          ¿Y si después necesito agregar más cosas al sistema?
+          <span data-plus="" style="flex: none; width: 22px; height: 22px; position: relative; transition: transform .35s cubic-bezier(.2,.7,.2,1);">
+            <span style="position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: #6d0000;"></span>
+            <span style="position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: #6d0000;"></span>
+          </span>
+        </summary>
+        <p data-answer="" style="margin: 0; padding: 0 0 clamp(22px, 3vh, 30px); max-width: 76ch; font-size: clamp(15px, 1.2vw, 18px); line-height: 1.6; color: rgba(26,26,26,.72);">El sistema queda diseñado para poder crecer con tu negocio. Si necesitas ajustes más adelante, seguimos disponibles.</p>
+      </details>
+    </div>
+  </section>
+
+  <section style="position: relative; background: #1A1A1A; color: #E4E2DD; padding: clamp(90px, 14vh, 170px) clamp(20px, 4vw, 64px); overflow: hidden;">
+    <div style="position: absolute; inset: 0; opacity: .35; pointer-events: none;">
+      <svg viewBox="0 0 1440 600" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+        <g fill="none" stroke="#E4E2DD" stroke-width="1" opacity=".4">
+          <path d="M -100 300 Q 260 220 540 300 T 1160 300 T 1660 260" style="animation: caustic 14s ease-in-out infinite;"></path>
+          <path d="M -100 360 Q 280 280 560 360 T 1180 360 T 1680 320" style="animation: caustic 17s ease-in-out infinite 1s;"></path>
+        </g>
+      </svg>
+    </div>
+    <div style="position: relative; max-width: 1100px; margin: 0 auto;">
+      
+      <h2 data-reveal="" style="margin: 0 0 clamp(28px, 4vh, 46px); font-size: clamp(30px, 4vw, 62px); line-height: 1.03; letter-spacing: -.03em; font-weight: 700; text-wrap: pretty;">
+        Cuando todo tiene un lugar, el trabajo <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; color: #FFEDA8;">fluye de otra manera.</span>
+      </h2>
+      <p data-reveal="" style="margin: 0; max-width: 800px; font-size: clamp(16px, 1.5vw, 21px); line-height: 1.6; color: rgba(228,226,221,.78);">
+        El desorden no dispara alarmas como perder una venta, pero te cuesta lo mismo: horas buscando información, tareas que se caen, decisiones que tardan más de lo que deberían. Ordenar una vez bien, te ahorra ese costo cada semana de ahí en adelante.
+      </p>
+    </div>
+  </section>
+
+  <section id="contacto" style="position: relative; padding: clamp(80px, 12vh, 150px) clamp(20px, 4vw, 64px) clamp(50px, 7vh, 80px); overflow: hidden;">
+    <img src="assets/draw-walk-dark.png" alt="" style="position: absolute; right: 3%; top: clamp(40px, 8vh, 110px); width: clamp(110px, 13vw, 200px); opacity: .5; animation: floatB 12s ease-in-out infinite;">
+    <div style="position: relative; max-width: 1240px; margin: 0 auto;">
+      <div data-reveal="" style="display: flex; align-items: center; gap: 14px; margin-bottom: clamp(24px, 4vh, 44px);">
+        <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 14px; color: #6d0000;"><br></span>
+        <span style="width: 44px; height: 1px; background: rgba(26,26,26,.3);"></span>
+        <span style="font-size: 11px; letter-spacing: .24em; text-transform: uppercase; font-weight: 600; color: rgba(26,26,26,.6);"><br></span>
+      </div>
+
+      <h2 data-reveal="" style="margin: 0 0 20px; max-width: 1000px; font-size: clamp(30px, 4vw, 62px); line-height: 1.02; letter-spacing: -.035em; font-weight: 700; text-wrap: pretty;">
+        El orden que necesitas para trabajar mejor, <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; color: #6d0000;">adaptado a tu negocio.</span>
+      </h2>
+      <p data-reveal="" style="margin: 0 0 clamp(40px, 6vh, 68px); font-size: clamp(16px, 1.5vw, 21px); line-height: 1.55; color: rgba(26,26,26,.72);">
+        Finanzas claras o equipo organizado. Un sistema que sí vas a usar. Listo en 7 días.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(36px, 5vw, 80px); align-items: start;">
+        <div data-reveal="">
+          <a href="#form" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 12px; background: #6d0000; color: #FFEDA8; padding: 20px 38px; border-radius: 999px; font-size: clamp(16px, 1.4vw, 19px); font-weight: 600;" style-hover="background: #1A1A1A;">
+            Agenda tu reunión inicial gratuita
+            <span style="position: absolute; top: 0; bottom: 0; width: 40%; background: linear-gradient(90deg, transparent, rgba(255,237,168,.28), transparent); animation: sweep 3.8s ease-in-out infinite;"></span>
+          </a>
+          <p style="margin: 20px 0 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 16px; color: rgba(26,26,26,.62);">Sin compromiso · 30–60 minutos · Te escuchamos primero</p>
+          <div style="margin-top: clamp(32px, 5vh, 54px); padding-top: 26px; border-top: 1px solid rgba(26,26,26,.16); display: flex; flex-wrap: wrap; gap: 12px;">
+            <a href="https://wa.me/507" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(26,26,26,.28); color: #1A1A1A; padding: 13px 24px; border-radius: 999px; font-size: 14px; font-weight: 500;" style-hover="border-color: #6d0000; color: #6d0000;">WhatsApp directo</a>
+            <span style="display: inline-flex; align-items: center; padding: 13px 0; font-size: 13px; color: rgba(26,26,26,.5);">Panamá · respondemos el mismo día</span>
+          </div>
+        </div>
+
+        <form id="form" data-reveal="" onSubmit="{{ onSubmit }}" style="display: grid; gap: 20px; background: #1A1A1A; color: #E4E2DD; padding: clamp(26px, 4vw, 44px); border-radius: 26px;">
+          <p style="margin: 0; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; color: rgba(228,226,221,.6);">Cuéntanos qué necesitas organizar</p>
+          <label style="display: grid; gap: 8px; font-size: 13px; color: rgba(228,226,221,.7);">
+            Nombre
+            <input type="text" name="nombre" style="background: transparent; border: none; border-bottom: 1px solid rgba(228,226,221,.3); color: #E4E2DD; font-size: 16px; padding: 10px 0; outline: none;" style-focus="border-color: #FFEDA8;">
+          </label>
+          <label style="display: grid; gap: 8px; font-size: 13px; color: rgba(228,226,221,.7);">
+            Teléfono
+            <input type="tel" name="telefono" style="background: transparent; border: none; border-bottom: 1px solid rgba(228,226,221,.3); color: #E4E2DD; font-size: 16px; padding: 10px 0; outline: none;" style-focus="border-color: #FFEDA8;">
+          </label>
+          <label style="display: grid; gap: 8px; font-size: 13px; color: rgba(228,226,221,.7);">
+            ¿Qué necesitas organizar?
+            <select name="que" style="background: transparent; border: none; border-bottom: 1px solid rgba(228,226,221,.3); color: #E4E2DD; font-size: 16px; padding: 10px 0; outline: none;" style-focus="border-color: #FFEDA8;">
+              <option style="color: #1A1A1A;">Finanzas</option>
+              <option style="color: #1A1A1A;">Equipo</option>
+              <option style="color: #1A1A1A;">Ambos</option>
+            </select>
+          </label>
+          <label style="display: grid; gap: 8px; font-size: 13px; color: rgba(228,226,221,.7);">
+            ¿Cómo lo manejas actualmente?
+            <select name="como" style="background: transparent; border: none; border-bottom: 1px solid rgba(228,226,221,.3); color: #E4E2DD; font-size: 16px; padding: 10px 0; outline: none;" style-focus="border-color: #FFEDA8;">
+              <option style="color: #1A1A1A;">Excel</option>
+              <option style="color: #1A1A1A;">WhatsApp</option>
+              <option style="color: #1A1A1A;">Papel</option>
+              <option style="color: #1A1A1A;">Nada centralizado</option>
+              <option style="color: #1A1A1A;">Otro</option>
+            </select>
+          </label>
+          <label style="display: grid; gap: 8px; font-size: 13px; color: rgba(228,226,221,.7);">
+            Otro detalle
+            <textarea name="detalle" rows="3" style="background: transparent; border: none; border-bottom: 1px solid rgba(228,226,221,.3); color: #E4E2DD; font-size: 16px; padding: 10px 0; outline: none; resize: vertical;" style-focus="border-color: #FFEDA8;"></textarea>
+          </label>
+          <button type="submit" style="justify-self: start; margin-top: 6px; background: #FFEDA8; color: #1A1A1A; border: none; padding: 16px 32px; border-radius: 999px; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="background: #E4E2DD;">Enviar</button>
+          <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+            <p style="margin: 0; font-size: 14px; color: #FFEDA8;">Gracias. Te contactamos hoy mismo.</p>
+          </sc-if>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid rgba(26,26,26,.16); padding: 34px clamp(20px, 4vw, 64px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="assets/logo-bordeaux-on-cream.svg" alt="Areia" style="height: 22px; display: block;">
+      <span style="font-size: 11px; letter-spacing: .22em; text-transform: uppercase; font-weight: 600;">Areia Design Studio</span>
+    </div>
+    <span style="font-size: 12px; color: rgba(26,26,26,.5);">Sistemas en Notion · Panamá · 2026</span>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Sutil&quot;,&quot;Medio&quot;,&quot;Notorio&quot;],&quot;default&quot;:&quot;Medio&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Movimiento&quot;}}">
+class Component extends DCLogic {
+  state = { sent: false };
+
+  componentDidMount() {
+    const dist = { Sutil: 12, Medio: 26, Notorio: 46 }[this.props.motion ?? 'Medio'] ?? 26;
+    const nodes = Array.from(this.el ? this.el.querySelectorAll('[data-reveal]') : document.querySelectorAll('[data-reveal]'));
+    nodes.forEach((n, i) => {
+      n.style.opacity = '0';
+      n.style.transform = 'translateY(' + dist + 'px)';
+      n.style.transition = 'opacity .9s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1)';
+      n.style.transitionDelay = (i % 4) * 0.06 + 's';
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'none';
+          io.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+    nodes.forEach((n) => io.observe(n));
+    this._io = io;
+
+    const root = this.el || document;
+    root.querySelectorAll('video').forEach((v) => {
+      v.muted = true;
+      const kick = () => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+      kick();
+      v.addEventListener('pause', kick);
+      v.addEventListener('canplay', kick);
+    });
+  }
+
+  componentWillUnmount() { if (this._io) this._io.disconnect(); }
+
+  renderVals() {
+    return {
+      sent: this.state.sent,
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+
+</script>
+</body>
+</html>
