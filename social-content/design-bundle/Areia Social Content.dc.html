@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #fdf2f8; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; text-wrap: pretty; }
+  a { color: #6d0000; text-decoration: none; }
+  a:hover { color: #440000; }
+  @keyframes ar-rise { from { opacity: 0; transform: translateY(34px); } to { opacity: 1; transform: none; } }
+  @keyframes ar-fade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes ar-mask { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+  @keyframes ar-maskup { from { clip-path: inset(100% 0 0 0); transform: scale(1.06); } to { clip-path: inset(0 0 0 0); transform: none; } }
+  @keyframes ar-sweep { 0% { transform: translateX(-120%) skewX(-14deg); } 55%, 100% { transform: translateX(240%) skewX(-14deg); } }
+  @keyframes ar-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+</style>
+</helmet>
+<div style="background: #fdf2f8; overflow: clip; font-family: 'Outfit', sans-serif;">
+
+  
+
+  <section id="top" data-screen-label="01 Hero" style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); min-height: calc(100vh - 74px); background: #fdf2f8;">
+    <div style="position: relative; overflow: hidden; min-height: 78vh; background: #fdf2f8;">
+      <div style="position: absolute; inset: clamp(90px, 20vh, 240px) 0 0 0; background-image: url('assets/hero.png'); background-size: cover; background-position: 6% bottom; animation: ar-maskup 1.6s cubic-bezier(0.16, 0.84, 0.24, 1) both; width: 525px; height: 591px; left: 32px; top: 46px"></div>
+      
+      
+      <div style="position: absolute; top: 17px; left: 35px; display: flex; align-items: center; gap: 12px; font: 500 10px 'Outfit', sans-serif; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(26, 26, 26, 0.55); animation: ar-fade 1.4s ease 0.4s both"><span style="width: 8px; height: 8px; border-radius: 50%; background: #1A1A1A;"></span>Estudio · Panamá</div>
+      
+      <div style="position: absolute; left: clamp(20px, 3vw, 44px); bottom: clamp(20px, 3vw, 44px); padding: 9px 18px; border-radius: 999px; background: #1A1A1A; font: 500 10px 'Outfit', sans-serif; letter-spacing: 0.3em; text-transform: uppercase; color: #FFFFFF; animation: ar-fade 2s ease 1.6s both;">Areia · Social Content</div>
+    </div><div style="display: flex; flex-direction: column; justify-content: center; gap: clamp(22px, 2.4vw, 34px); padding: clamp(60px, 12vh, 150px) 0 clamp(44px, 6vw, 96px) clamp(4px, 0.6vw, 12px); width: 100%; min-height: 693px">
+      <div style="display: flex; align-items: center; gap: 14px; animation: ar-fade 1.2s ease 0.2s both;">
+        <span style="width: 46px; height: 1px; background: #1A1A1A; opacity: 0.5;"></span>
+        
+      </div>
+      <h1 style="margin: 0; font: 800 clamp(40px, 5vw, 86px)/0.94 'Outfit', sans-serif; letter-spacing: -0.038em; color: #6d0000; animation: ar-rise 1.1s cubic-bezier(0.16, 0.84, 0.24, 1) 0.3s both;">Dale <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; letter-spacing: -0.01em;">dirección</span> a todo<br>lo que publicas.</h1>
+      <p style="margin: 0; max-width: 36ch; font: 400 clamp(18px, 1.5vw, 24px)/1.5 'Outfit', sans-serif; color: rgba(26, 26, 26, 0.78); animation: ar-rise 1.1s cubic-bezier(0.16, 0.84, 0.24, 1) 0.45s both;">Diseñamos el contenido visual de tus redes sociales: posts, carruseles, historias y reels con la consistencia que tu marca merece.</p>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; animation: ar-rise 1.1s cubic-bezier(0.16, 0.84, 0.24, 1) 0.6s both;">
+        <a href="#contacto" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 12px; padding: 20px 40px; border-radius: 999px; white-space: nowrap; background: #6d0000; color: #FFEDA8; font: 600 14px 'Outfit', sans-serif; letter-spacing: 0.14em; text-transform: uppercase; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), background 0.4s;" style-hover="background: #4d0000; transform: translateY(-3px);">Quiero mi contenido<span style="font-size: 15px;">→</span></a>
+        <sc-if value="{{ whatsappCta }}" hint-placeholder-val="{{ true }}">
+          <a href="#contacto" style="display: inline-flex; align-items: center; padding: 20px 34px; border-radius: 999px; border: 1px solid rgba(109, 0, 0, 0.28); color: #6d0000; font: 600 14px 'Outfit', sans-serif; letter-spacing: 0.14em; text-transform: uppercase; transition: background 0.4s, border-color 0.4s;" style-hover="background: rgba(109, 0, 0, 0.06); border-color: #6d0000;">Escríbenos</a>
+        </sc-if>
+      </div>
+      <p style="margin: 0; display: flex; flex-wrap: wrap; gap: 10px 18px; font: 500 12px 'Outfit', sans-serif; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(26, 26, 26, 0.5); animation: ar-fade 1.4s ease 0.8s both;">
+        <span>Entrega en 3–5 días</span><span style="opacity: 0.4;">·</span><span>Desde $75</span><span style="opacity: 0.4;">·</span><span>Ya trabajamos con marcas como la tuya</span>
+      </p>
+    </div>
+    
+  </section>
+
+  <section data-screen-label="02 Agitación" style="position: relative; min-height: 100vh; display: flex; align-items: center; background: #fdf2f8; overflow: hidden;">
+    <div style="position: relative; width: 100%; max-width: 1180px; margin: 0 auto; padding: clamp(70px, 9vw, 140px) clamp(24px, 6vw, 120px);">
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 26px; animation: ar-fade 1s ease both; animation-timeline: view(); animation-range: entry 6% cover 26%;">
+        
+      </div>
+      <h2 style="margin: 0 0 clamp(28px, 3vw, 46px); font: 800 clamp(34px, 4.4vw, 68px)/0.98 'Outfit', sans-serif; letter-spacing: -0.03em; color: #6d0000; animation: ar-rise 1.1s cubic-bezier(0.16, 0.84, 0.24, 1) both; animation-timeline: view(); animation-range: entry 8% cover 30%;">¿Te suena <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400;">familiar</span>?</h2>
+      <ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); column-gap: clamp(32px, 5vw, 90px);">
+        <li style="display: grid; grid-template-columns: 40px 1fr; gap: 18px; padding: 20px 0; border-top: 1px solid rgba(26, 26, 26, 0.18); animation: ar-rise 0.9s cubic-bezier(0.16, 0.84, 0.24, 1) both; animation-timeline: view(); animation-range: entry 4% cover 22%;"><span style="font: 500 11px 'Outfit', sans-serif; letter-spacing: 0.16em; color: #1A1A1A; opacity: 0.5; padding-top: 5px;">01</span><span style="font: 400 clamp(15px, 1.15vw, 18px)/1.5 'Outfit', sans-serif; color: #1A1A1A;">Sabes que necesitas publicar constante, pero no tienes tiempo ni ganas de sentarte a diseñar cada semana</span></li>
+        <li style="display: grid; grid-template-columns: 40px 1fr; gap: 18px; padding: 20px 0; border-top: 1px solid rgba(26, 26, 26, 0.18); animation: ar-rise 0.9s cubic-bezier(0.16, 0.84, 0.24, 1) both; animation-timeline: view(); animation-range: entry 4% cover 24%;"><span style="font: 500 11px 'Outfit', sans-serif; letter-spacing: 0.16em; color: #1A1A1A; opacity: 0.5; padding-top: 5px;">02</span><span style="font: 400 clamp(15px, 1.15vw, 18px)/1.5 'Outfit', sans-serif; color: #1A1A1A;">Cuando publicas tú misma, se nota que no es exactamente igual a tu identidad de marca</span></li>
+        <li style="display: grid; grid-template-columns: 40px 1fr; gap: 18px; padding: 20px 0; border-top: 1px solid rgba(26, 26, 26, 0.18); animation: ar-rise 0.9s cubic-bezier(0.16, 0.84, 0.24, 1) both; animation-timeline: view(); animation-range: entry 4% cover 26%;"><span style="font: 500 11px 'Outfit', sans-serif; letter-spacing: 0.16em; color: #1A1A1A; opacity: 0.5; padding-top: 5px;">03</span><span style="font: 400 clamp(15px, 1.15vw, 18px)/1.5 'Outfit', sans-serif; color: #1A1A1A;">Tienes ideas para carruseles o reels, pero se quedan en notas de tu celular sin ejecutar</span></li>
+        <li style="display: grid; grid-template-columns: 40px 1fr; gap: 18px; padding: 20px 0; border-top: 1px solid rgba(26, 26, 26, 0.18); animation: ar-rise 0.9s cubic-bezier(0.16, 0.84, 0.24, 1) both; animation-timeline: view(); animation-range: entry 4% cover 28%;"><span style="font: 500 11px 'Outfit', sans-serif; letter-spacing: 0.16em; color: #1A1A1A; opacity: 0.5; padding-top: 5px;">04</span><span style="font: 400 clamp(15px, 1.15vw, 18px)/1.5 'Outfit', sans-serif; color: #1A1A1A;">Tu contenido varía tanto que tu feed no se siente como una sola marca</span></li>
+        <li style="display: grid; grid-template-columns: 40px 1fr; gap: 18px; padding: 20px 0; border-top: 1px solid rgba(26, 26, 26, 0.18); border-bottom: 1px solid rgba(26, 26, 26, 0.18); animation: ar-rise 0.9s cubic-bezier(0.16, 0.84, 0.24, 1) both; animation-timeline: view(); animation-range: entry 4% cover 30%;"><span style="font: 500 11px 'Outfit', sans-serif; letter-spacing: 0.16em; color: #1A1A1A; opacity: 0.5; padding-top: 5px;">05</span><span style="font: 400 clamp(15px, 1.15vw, 18px)/1.5 'Outfit', sans-serif; color: #1A1A1A;">Sabes que el contenido bueno genera más alcance, pero no tienes quién lo haga bien y rápido</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section data-screen-label="03 Giro" style="position: relative; background: #6d0000; color: #E4E2DD; padding: clamp(80px, 11vw, 180px) clamp(24px, 6vw, 120px); overflow: hidden;">
+    
+  <div style="position: relative; max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: clamp(46px, 6vw, 92px);">
+      <p style="margin: 0; max-width: none; font: 400 clamp(30px, 4.2vw, 72px)/1.1 'Playfair Display', serif; font-style: italic; color: #FFFFFF; animation: ar-mask 1.4s cubic-bezier(0.16, 0.84, 0.24, 1) both; animation-timeline: view(); animation-range: entry 6% cover 34%; width: 787px; height: 211px">No es falta de ideas. Es falta de tiempo, consistencia y alguien que lo ejecute como tú lo imaginas.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: clamp(32px, 4vw, 72px); align-items: start;">
+        <div>
+          
+          <h2 style="margin: 0; font: 800 clamp(30px, 3.3vw, 52px)/1.02 'Outfit', sans-serif; letter-spacing: -0.03em; color: #FFFFFF; animation: ar-rise 1.1s cubic-bezier(0.16, 0.84, 0.24, 1) both; animation-timeline: view(); animation-range: entry 8% cover 34%;">No necesitas contratar un equipo de redes. Necesitas contenido que se vea como tú.</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 26px; padding-top: 8px;">
+          <p style="margin: 0; font: 400 clamp(16px, 1.2vw, 19px)/1.62 'Outfit', sans-serif; color: rgba(255, 255, 255, 0.8); animation: ar-fade 1.2s ease both; animation-timeline: view(); animation-range: entry 8% cover 34%;">No tienes que elegir entre hacerlo tú misma (y perder horas que no tienes) o contratar un servicio mensual completo que cuesta cientos de dólares al mes.</p>
+          <p style="margin: 0; font: 400 clamp(16px, 1.2vw, 19px)/1.62 'Outfit', sans-serif; color: rgba(255, 255, 255, 0.8); animation: ar-fade 1.2s ease 0.15s both; animation-timeline: view(); animation-range: entry 8% cover 36%;">Nosotros diseñamos tu contenido posts, carruseles, historias, reels, con la consistencia visual que ya define tu marca, entregado rápido, para que tú solo tengas que publicar.</p>
+        </div>
+      </div>
+    </div></section>
+
+  <div style="display: flex; flex-direction: column;">
+
+  <section data-screen-label="04 Qué incluye" style="order: {{ includesOrder }}; background: #E4E2DD; padding: clamp(80px, 10vw, 160px) clamp(24px, 6vw, 120px);">
+    <div style="max-width: 1180px; margin: 0 auto;">
+      
+      <h2 style="margin: 0 0 clamp(40px, 5vw, 78px); max-width: 26ch; font: 800 clamp(30px, 3.6vw, 58px)/1.0 'Outfit', sans-serif; letter-spacing: -0.03em; color: #6d0000; animation: ar-rise 1.1s cubic-bezier(0.16, 0.84, 0.24, 1) both; animation-timeline: view(); animation-range: entry 8% cover 30%;">Contenido diseñado para cada objetivo, no solo para “llenar el feed”</h2>
+      <div style="display: flex; flex-direction: column; border-top: 1px solid rgba(109, 0, 0, 0.2);">
+        <div style="display: grid; grid-template-columns: minmax(180px, 1fr) minmax(260px, 1.4fr); gap: 20px 40px; padding: 12px 0; font: 500 10px 'Outfit', sans-serif; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(26, 26, 26, 0.45); border-bottom: 1px solid rgba(109, 0, 0, 0.12);"><span>Qué recibes</span><span>Por qué importa</span></div>
+        <div style="display: grid; grid-template-columns: minmax(180px, 1fr) minmax(260px, 1.4fr); gap: 8px 40px; padding: clamp(20px, 2vw, 30px) 0; border-bottom: 1px solid rgba(109, 0, 0, 0.12); animation: ar-rise 0.8s ease both; animation-timeline: view(); animation-range: entry 2% cover 20%; transition: background 0.4s;" style-hover="background: rgba(109, 0, 0, 0.04);"><span style="font: 700 clamp(19px, 1.6vw, 26px)/1.15 'Outfit', sans-serif; letter-spacing: -0.02em; color: #6d0000;">Posts individuales</span><span style="font: 400 clamp(15px, 1.1vw, 18px)/1.5 'Outfit', sans-serif; color: rgba(26, 26, 26, 0.8);">Para mensajes puntuales que necesitan destacar solos</span></div>
+        <div style="display: grid; grid-template-columns: minmax(180px, 1fr) minmax(260px, 1.4fr); gap: 8px 40px; padding: clamp(20px, 2vw, 30px) 0; border-bottom: 1px solid rgba(109, 0, 0, 0.12); animation: ar-rise 0.8s ease both; animation-timeline: view(); animation-range: entry 2% cover 22%; transition: background 0.4s;" style-hover="background: rgba(109, 0, 0, 0.04);"><span style="font: 700 clamp(19px, 1.6vw, 26px)/1.15 'Outfit', sans-serif; letter-spacing: -0.02em; color: #6d0000;">Carruseles</span><span style="font: 400 clamp(15px, 1.1vw, 18px)/1.5 'Outfit', sans-serif; color: rgba(26, 26, 26, 0.8);">Para explicar, educar o contar tu historia de forma dinámica</span></div>
+        <div style="display: grid; grid-template-columns: minmax(180px, 1fr) minmax(260px, 1.4fr); gap: 8px 40px; padding: clamp(20px, 2vw, 30px) 0; border-bottom: 1px solid rgba(109, 0, 0, 0.12); animation: ar-rise 0.8s ease both; animation-timeline: view(); animation-range: entry 2% cover 24%; transition: background 0.4s;" style-hover="background: rgba(109, 0, 0, 0.04);"><span style="font: 700 clamp(19px, 1.6vw, 26px)/1.15 'Outfit', sans-serif; letter-spacing: -0.02em; color: #6d0000;">Historias</span><span style="font: 400 clamp(15px, 1.1vw, 18px)/1.5 'Outfit', sans-serif; color: rgba(26, 26, 26, 0.8);">Para mantener cercanía constante con tu audiencia</span></div>
+        <div style="display: grid; grid-template-columns: minmax(180px, 1fr) minmax(260px, 1.4fr); gap: 8px 40px; padding: clamp(20px, 2vw, 30px) 0; border-bottom: 1px solid rgba(109, 0, 0, 0.12); animation: ar-rise 0.8s ease both; animation-timeline: view(); animation-range: entry 2% cover 26%; transition: background 0.4s;" style-hover="background: rgba(109, 0, 0, 0.04);"><span style="font: 700 clamp(19px, 1.6vw, 26px)/1.15 'Outfit', sans-serif; letter-spacing: -0.02em; color: #6d0000;">Reels con edición dinámica</span><span style="font: 400 clamp(15px, 1.1vw, 18px)/1.5 'Outfit', sans-serif; color: rgba(26, 26, 26, 0.8);">Para aumentar alcance real, no solo estar presente</span></div>
+        <div style="display: grid; grid-template-columns: minmax(180px, 1fr) minmax(260px, 1.4fr); gap: 8px 40px; padding: clamp(20px, 2vw, 30px) 0; border-bottom: 1px solid rgba(109, 0, 0, 0.2); animation: ar-rise 0.8s ease both; animation-timeline: view(); animation-range: entry 2% cover 28%; transition: background 0.4s;" style-hover="background: rgba(109, 0, 0, 0.04);"><span style="font: 700 clamp(19px, 1.6vw, 26px)/1.15 'Outfit', sans-serif; letter-spacing: -0.02em; color: #6d0000;">Creatividades para Meta Ads</span><span style="font: 400 clamp(15px, 1.1vw, 18px)/1.5 'Outfit', sans-serif; color: rgba(26, 26, 26, 0.8);">Listas para campañas publicitarias, no solo contenido orgánico</span></div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 36px; margin-top: clamp(40px, 5vw, 72px);">
+        <div style="flex: 1 1 340px; min-width: 0; max-width: 44ch;">
+          <p style="margin: 0 0 18px; font: 400 clamp(20px, 1.8vw, 28px)/1.3 'Playfair Display', serif; font-style: italic; color: #6d0000; width: 577px; height: 60px">El resultado: una comunicación visual consistente que fortalece tu imagen y conecta con tu audiencia.</p>
+          <p style="margin: 0; font: 500 12px 'Outfit', sans-serif; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(26, 26, 26, 0.55);">$75 – $200 · Entrega en 3–5 días</p>
+        </div>
+        <a href="#contacto" style="display: inline-flex; align-items: center; gap: 12px; padding: 20px 40px; border-radius: 999px; white-space: nowrap; background: #6d0000; color: #FFEDA8; font: 600 14px 'Outfit', sans-serif; letter-spacing: 0.14em; text-transform: uppercase; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), background 0.4s;" style-hover="background: #4d0000; transform: translateY(-3px);">Quiero mi contenido<span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  
+
+  </div>
+
+  <section data-screen-label="06 Proceso" style="position: relative; background: #fdf2f8; padding: clamp(80px, 10vw, 160px) clamp(24px, 6vw, 120px); border-top: 1px solid rgba(109, 0, 0, 0.12);">
+    <div style="max-width: 1180px; margin: 0 auto;">
+      
+      <h2 style="margin: 0 0 clamp(44px, 5vw, 78px); font: 800 clamp(30px, 3.6vw, 58px)/1.0 'Outfit', sans-serif; letter-spacing: -0.03em; color: #6d0000; animation: ar-rise 1.1s cubic-bezier(0.16, 0.84, 0.24, 1) both; animation-timeline: view(); animation-range: entry 8% cover 30%;">Así de simple es el proceso</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: clamp(20px, 2.4vw, 40px);">
+        <div style="display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 2px solid #1A1A1A; animation: ar-rise 0.9s ease both; animation-timeline: view(); animation-range: entry 4% cover 24%;"><span style="font: 400 34px 'Playfair Display', serif; font-style: italic; color: #1A1A1A;">01</span><p style="margin: 0; font: 700 clamp(17px, 1.3vw, 21px)/1.2 'Outfit', sans-serif; letter-spacing: -0.02em; color: #1A1A1A;">Nos cuentas qué necesitas</p><p style="margin: 0; font: 400 15px/1.5 'Outfit', sans-serif; color: rgba(26, 26, 26, 0.7);">Tipo de contenido, cantidad, objetivo.</p></div>
+        <div style="display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 2px solid rgba(26, 26, 26, 0.22); animation: ar-rise 0.9s ease both; animation-timeline: view(); animation-range: entry 4% cover 26%;"><span style="font: 400 34px 'Playfair Display', serif; font-style: italic; color: #1A1A1A;">02</span><p style="margin: 0; font: 700 clamp(17px, 1.3vw, 21px)/1.2 'Outfit', sans-serif; letter-spacing: -0.02em; color: #1A1A1A;">Diseñamos con tu identidad de marca</p><p style="margin: 0; font: 400 15px/1.5 'Outfit', sans-serif; color: rgba(26, 26, 26, 0.7);">Consistente con lo que ya eres.</p></div>
+        <div style="display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 2px solid rgba(26, 26, 26, 0.22); animation: ar-rise 0.9s ease both; animation-timeline: view(); animation-range: entry 4% cover 28%;"><span style="font: 400 34px 'Playfair Display', serif; font-style: italic; color: #1A1A1A;">03</span><p style="margin: 0; font: 700 clamp(17px, 1.3vw, 21px)/1.2 'Outfit', sans-serif; letter-spacing: -0.02em; color: #1A1A1A;">Revisión</p><p style="margin: 0; font: 400 15px/1.5 'Outfit', sans-serif; color: rgba(26, 26, 26, 0.7);">Hasta 2 rondas de ajustes incluidas.</p></div>
+        <div style="display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 2px solid rgba(26, 26, 26, 0.22); animation: ar-rise 0.9s ease both; animation-timeline: view(); animation-range: entry 4% cover 30%;"><span style="font: 400 34px 'Playfair Display', serif; font-style: italic; color: #1A1A1A;">04</span><p style="margin: 0; font: 700 clamp(17px, 1.3vw, 21px)/1.2 'Outfit', sans-serif; letter-spacing: -0.02em; color: #1A1A1A;">Entrega final</p><p style="margin: 0; font: 400 15px/1.5 'Outfit', sans-serif; color: rgba(26, 26, 26, 0.7);">Listo para publicar en 3–5 días.</p></div>
+      </div>
+      <p style="margin: clamp(40px, 4vw, 64px) 0 0; font: 400 clamp(22px, 2.2vw, 34px)/1.25 'Playfair Display', serif; font-style: italic; color: #6d0000;">Rápido, consistente, sin complicaciones.</p>
+    </div>
+  </section>
+
+  <sc-if value="{{ showFaq }}" hint-placeholder-val="{{ true }}">
+  <section data-screen-label="07 Objeciones" style="background: #E4E2DD; padding: clamp(80px, 10vw, 160px) clamp(24px, 6vw, 120px);">
+    <div style="max-width: 980px; margin: 0 auto;">
+      
+      <h2 style="margin: 0 0 clamp(36px, 4vw, 62px); font: 800 clamp(28px, 3.2vw, 50px)/1.02 'Outfit', sans-serif; letter-spacing: -0.03em; color: #6d0000;">Lo que casi siempre nos preguntan</h2>
+      <div style="display: flex; flex-direction: column; border-top: 1px solid rgba(109, 0, 0, 0.2);">
+        <div style="border-bottom: 1px solid rgba(109, 0, 0, 0.2);">
+          <div onClick="{{ t0 }}" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: clamp(22px, 2.2vw, 32px) 0; cursor: pointer;"><span style="font: 600 clamp(17px, 1.5vw, 24px)/1.25 'Outfit', sans-serif; letter-spacing: -0.02em; color: #6d0000;">¿Necesito tener ya mi identidad de marca definida?</span><span style="flex: none; width: 34px; height: 34px; border-radius: 999px; border: 1px solid rgba(109, 0, 0, 0.3); display: flex; align-items: center; justify-content: center; font: 400 18px 'Outfit', sans-serif; color: #6d0000;">{{ s0 }}</span></div>
+          <sc-if value="{{ open0 }}" hint-placeholder-val="{{ false }}"><p style="margin: 0; padding: 0 0 30px; max-width: 62ch; font: 400 clamp(15px, 1.15vw, 18px)/1.6 'Outfit', sans-serif; color: rgba(26, 26, 26, 0.8); animation: ar-fade 0.5s ease both;">No es obligatorio. Trabajamos con lo que ya tienes y lo reforzamos con cada pieza que diseñamos.</p></sc-if>
+        </div>
+        <div style="border-bottom: 1px solid rgba(109, 0, 0, 0.2);">
+          <div onClick="{{ t1 }}" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: clamp(22px, 2.2vw, 32px) 0; cursor: pointer;"><span style="font: 600 clamp(17px, 1.5vw, 24px)/1.25 'Outfit', sans-serif; letter-spacing: -0.02em; color: #6d0000;">¿Cuánto contenido recibo por el precio?</span><span style="flex: none; width: 34px; height: 34px; border-radius: 999px; border: 1px solid rgba(109, 0, 0, 0.3); display: flex; align-items: center; justify-content: center; font: 400 18px 'Outfit', sans-serif; color: #6d0000;">{{ s1 }}</span></div>
+          <sc-if value="{{ open1 }}" hint-placeholder-val="{{ false }}"><p style="margin: 0; padding: 0 0 30px; max-width: 62ch; font: 400 clamp(15px, 1.15vw, 18px)/1.6 'Outfit', sans-serif; color: rgba(26, 26, 26, 0.8); animation: ar-fade 0.5s ease both;">Depende del paquete que elijas dentro del rango $75–$200. En la llamada te ayudamos a definir exactamente qué necesitas según tu objetivo del mes.</p></sc-if>
+        </div>
+        <div style="border-bottom: 1px solid rgba(109, 0, 0, 0.2);">
+          <div onClick="{{ t2 }}" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: clamp(22px, 2.2vw, 32px) 0; cursor: pointer;"><span style="font: 600 clamp(17px, 1.5vw, 24px)/1.25 'Outfit', sans-serif; letter-spacing: -0.02em; color: #6d0000;">¿Puedo pedir solo reels, o solo carruseles?</span><span style="flex: none; width: 34px; height: 34px; border-radius: 999px; border: 1px solid rgba(109, 0, 0, 0.3); display: flex; align-items: center; justify-content: center; font: 400 18px 'Outfit', sans-serif; color: #6d0000;">{{ s2 }}</span></div>
+          <sc-if value="{{ open2 }}" hint-placeholder-val="{{ false }}"><p style="margin: 0; padding: 0 0 30px; max-width: 62ch; font: 400 clamp(15px, 1.15vw, 18px)/1.6 'Outfit', sans-serif; color: rgba(26, 26, 26, 0.8); animation: ar-fade 0.5s ease both;">Sí, el servicio es flexible según lo que tu marca necesite más en este momento.</p></sc-if>
+        </div>
+        <div style="border-bottom: 1px solid rgba(109, 0, 0, 0.2);">
+          <div onClick="{{ t3 }}" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: clamp(22px, 2.2vw, 32px) 0; cursor: pointer;"><span style="font: 600 clamp(17px, 1.5vw, 24px)/1.25 'Outfit', sans-serif; letter-spacing: -0.02em; color: #6d0000;">¿Qué tan rápido lo tengo listo?</span><span style="flex: none; width: 34px; height: 34px; border-radius: 999px; border: 1px solid rgba(109, 0, 0, 0.3); display: flex; align-items: center; justify-content: center; font: 400 18px 'Outfit', sans-serif; color: #6d0000;">{{ s3 }}</span></div>
+          <sc-if value="{{ open3 }}" hint-placeholder-val="{{ false }}"><p style="margin: 0; padding: 0 0 30px; max-width: 62ch; font: 400 clamp(15px, 1.15vw, 18px)/1.6 'Outfit', sans-serif; color: rgba(26, 26, 26, 0.8); animation: ar-fade 0.5s ease both;">3 a 5 días desde que confirmamos el brief de los servicios más rápidos que ofrecemos.</p></sc-if>
+        </div>
+        <div style="border-bottom: 1px solid rgba(109, 0, 0, 0.2);">
+          <div onClick="{{ t4 }}" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: clamp(22px, 2.2vw, 32px) 0; cursor: pointer;"><span style="font: 600 clamp(17px, 1.5vw, 24px)/1.25 'Outfit', sans-serif; letter-spacing: -0.02em; color: #6d0000;">¿Y si necesito esto todos los meses?</span><span style="flex: none; width: 34px; height: 34px; border-radius: 999px; border: 1px solid rgba(109, 0, 0, 0.3); display: flex; align-items: center; justify-content: center; font: 400 18px 'Outfit', sans-serif; color: #6d0000;">{{ s4 }}</span></div>
+          <sc-if value="{{ open4 }}" hint-placeholder-val="{{ false }}"><p style="margin: 0; padding: 0 0 30px; max-width: 62ch; font: 400 clamp(15px, 1.15vw, 18px)/1.6 'Outfit', sans-serif; color: rgba(26, 26, 26, 0.8); animation: ar-fade 0.5s ease both;">Varias marcas ya trabajan con nosotras de forma recurrente — lo hablamos en la llamada y armamos un ritmo que funcione para ti.</p></sc-if>
+        </div>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <section data-screen-label="08 Urgencia" style="position: relative; background: #1A1A1A; padding: clamp(90px, 12vw, 190px) clamp(24px, 6vw, 120px); overflow: hidden;">
+    <div style="position: relative; max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(34px, 4vw, 80px); align-items: end;">
+      <div>
+        
+        <h2 style="margin: 0; font: 800 clamp(30px, 3.7vw, 60px)/1.0 'Outfit', sans-serif; letter-spacing: -0.035em; color: #FFFFFF; animation: ar-rise 1.2s cubic-bezier(0.16, 0.84, 0.24, 1) both; animation-timeline: view(); animation-range: entry 8% cover 32%;">Cada semana sin contenido consistente, el algoritmo te olvida un poco más.</h2>
+      </div>
+      <p style="margin: 0; font: 400 clamp(16px, 1.2vw, 19px)/1.65 'Outfit', sans-serif; color: rgba(255, 255, 255, 0.72); animation: ar-fade 1.4s ease both; animation-timeline: view(); animation-range: entry 8% cover 34%;">Las redes sociales premian la constancia. Mientras más espacios vacíos hay en tu feed, menos te ve tu audiencia y menos te recuerda. No se trata de publicar por publicar, se trata de no perder terreno que ya ganaste.</p>
+    </div>
+  </section>
+
+  <section id="contacto" data-screen-label="09 Cierre" style="position: relative; background: #fdf2f8; padding: clamp(80px, 10vw, 160px) clamp(24px, 6vw, 120px);">
+    <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: clamp(46px, 5vw, 96px);">
+      <div style="display: flex; flex-direction: column; gap: 26px;">
+        
+        <h2 style="margin: 0; font: 800 clamp(32px, 3.8vw, 62px)/0.98 'Outfit', sans-serif; letter-spacing: -0.035em; color: #6d0000;">Ya viste lo que hacemos. Hablemos de tu <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400;">contenido</span>.</h2>
+        <p style="margin: 0; max-width: 32ch; font: 400 clamp(16px, 1.25vw, 20px)/1.6 'Outfit', sans-serif; color: rgba(26, 26, 26, 0.78);">Contenido consistente, entregado rápido, con la identidad que ya te representa.</p>
+        <a href="#contacto" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; padding: 20px 40px; border-radius: 999px; white-space: nowrap; background: #6d0000; color: #FFEDA8; font: 600 14px 'Outfit', sans-serif; letter-spacing: 0.14em; text-transform: uppercase; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), background 0.4s;" style-hover="background: #4d0000; transform: translateY(-3px);">Agenda tu llamada<span>→</span></a>
+        <p style="margin: 0; font: 400 clamp(15px, 1.1vw, 17px)/1.55 'Playfair Display', serif; font-style: italic; color: rgba(26, 26, 26, 0.6);">¿Tienes dudas sobre tu cotización? Escríbenos, resolvemos todo antes de que decidas.</p>
+        
+      </div>
+      <form onSubmit="{{ submit }}" style="display: flex; flex-direction: column; gap: 18px; padding: clamp(26px, 3vw, 44px); border-radius: 30px; background: #E4E2DD; border: 1px solid rgba(26, 26, 26, 0.12);">
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; flex-direction: column; gap: 12px; padding: 30px 0; animation: ar-fade 0.6s ease both;"><p style="margin: 0; font: 700 26px 'Outfit', sans-serif; letter-spacing: -0.02em; color: #6d0000;">Recibido.</p><p style="margin: 0; font: 400 16px/1.55 'Outfit', sans-serif; color: rgba(26, 26, 26, 0.75);">Te escribimos con los siguientes pasos y una propuesta a tu medida.</p></div>
+        </sc-if>
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <label style="display: flex; flex-direction: column; gap: 9px;"><span style="font: 500 10px 'Outfit', sans-serif; letter-spacing: 0.26em; text-transform: uppercase; color: rgba(26, 26, 26, 0.55);">Nombre</span><input type="text" style="width: 100%; padding: 15px 20px; border-radius: 999px; border: 1px solid rgba(26, 26, 26, 0.18); background: #FFFFFF; font: 400 16px 'Outfit', sans-serif; color: #1A1A1A; outline: none;" style-focus="border-color: #1A1A1A;"></label>
+          <label style="display: flex; flex-direction: column; gap: 9px;"><span style="font: 500 10px 'Outfit', sans-serif; letter-spacing: 0.26em; text-transform: uppercase; color: rgba(26, 26, 26, 0.55);">Teléfono</span><input type="tel" style="width: 100%; padding: 15px 20px; border-radius: 999px; border: 1px solid rgba(26, 26, 26, 0.18); background: #FFFFFF; font: 400 16px 'Outfit', sans-serif; color: #1A1A1A; outline: none;" style-focus="border-color: #1A1A1A;"></label>
+          <label style="display: flex; flex-direction: column; gap: 9px;"><span style="font: 500 10px 'Outfit', sans-serif; letter-spacing: 0.26em; text-transform: uppercase; color: rgba(26, 26, 26, 0.55);">Negocio</span><input type="text" style="width: 100%; padding: 15px 20px; border-radius: 999px; border: 1px solid rgba(26, 26, 26, 0.18); background: #FFFFFF; font: 400 16px 'Outfit', sans-serif; color: #1A1A1A; outline: none;" style-focus="border-color: #1A1A1A;"></label>
+          <label style="display: flex; flex-direction: column; gap: 9px;"><span style="font: 500 10px 'Outfit', sans-serif; letter-spacing: 0.26em; text-transform: uppercase; color: rgba(26, 26, 26, 0.55);">Tipo de contenido que necesitas</span><select style="width: 100%; padding: 15px 20px; border-radius: 999px; border: 1px solid rgba(26, 26, 26, 0.18); background: #FFFFFF; font: 400 16px 'Outfit', sans-serif; color: #1A1A1A; outline: none; appearance: none;" style-focus="border-color: #1A1A1A;"><option>Posts</option><option>Carruseles</option><option>Historias</option><option>Reels</option><option>Meta Ads</option></select></label>
+          <label style="display: flex; flex-direction: column; gap: 9px;"><span style="font: 500 10px 'Outfit', sans-serif; letter-spacing: 0.26em; text-transform: uppercase; color: rgba(26, 26, 26, 0.55);">¿Es primera vez o ya recibiste una cotización?</span><select style="width: 100%; padding: 15px 20px; border-radius: 999px; border: 1px solid rgba(26, 26, 26, 0.18); background: #FFFFFF; font: 400 16px 'Outfit', sans-serif; color: #1A1A1A; outline: none; appearance: none;" style-focus="border-color: #1A1A1A;"><option>Primera vez</option><option>Ya recibí una cotización</option></select></label>
+          <button type="submit" style="margin-top: 6px; padding: 19px 36px; border: none; border-radius: 999px; white-space: nowrap; background: #6d0000; color: #FFEDA8; font: 600 14px 'Outfit', sans-serif; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), background 0.4s;" style-hover="background: #4d0000; transform: translateY(-3px);">Enviar</button>
+        </div>
+        </sc-if>
+      </form>
+    </div>
+  </section>
+
+  <footer style="background: #6d0000; padding: clamp(34px, 4vw, 60px) clamp(24px, 6vw, 120px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px;">
+    <img src="assets/logo-mark-light.svg" alt="Areia Design Studio" style="width: 39px; display: block; height: 18px">
+    <span style="font: 500 11px 'Outfit', sans-serif; letter-spacing: 0.26em; text-transform: uppercase; color: rgba(255, 237, 168, 0.7);">Areia Design Studio · Panamá</span>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;proofFirst&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Estructura&quot;},&quot;showFaq&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Estructura&quot;},&quot;whatsappCta&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Estructura&quot;}}">
+class Component extends DCLogic {
+  state = { open: 0, sent: false };
+  toggle(i) { this.setState(s => ({ open: s.open === i ? -1 : i })); }
+  renderVals() {
+    const o = this.state.open;
+    const proofFirst = this.props.proofFirst ?? false;
+    const v = { 
+      showFaq: this.props.showFaq ?? true,
+      whatsappCta: this.props.whatsappCta ?? true,
+      proofOrder: proofFirst ? 0 : 1,
+      includesOrder: proofFirst ? 1 : 0,
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+    for (let i = 0; i < 5; i++) {
+      v['open' + i] = o === i;
+      v['s' + i] = o === i ? '–' : '+';
+      v['t' + i] = () => this.toggle(i);
+    }
+    return v;
+  }
+}
+
+</script>
+</body>
+</html>
