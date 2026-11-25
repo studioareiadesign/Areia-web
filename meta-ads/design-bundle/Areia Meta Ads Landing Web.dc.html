@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&amp;family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;display=swap" rel="stylesheet">
+<style>
+html, body { margin: 0; padding: 0; background: #FDF0B5; scroll-behavior: smooth; }
+* { box-sizing: border-box; }
+a { color: #6d0000; text-decoration: none; }
+a:hover { color: #1A1A1A; }
+input, button { font-family: inherit; }
+input:focus { outline: none; }
+@keyframes areiaIn { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+@keyframes areiaSweep { 0% { transform: translateX(-120%) skewX(-12deg); } 55%, 100% { transform: translateX(340%) skewX(-12deg); } }
+@keyframes areiaFloat { 0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); } 50% { transform: translateY(-12px) rotate(var(--r, 0deg)); } }
+</style>
+</helmet>
+
+<div style="font-family: Figtree, Helvetica, sans-serif; color: #1A1A1A; text-wrap: pretty; background: #FDF0B5; padding: clamp(84px, 9vw, 120px) clamp(10px, 2vw, 28px) clamp(110px, 12vw, 170px); overflow-x: hidden;">
+
+  <nav data-nav="1" style="position: fixed; top: clamp(10px, 1.6vw, 20px); left: 0; right: 0; margin: 0 auto; z-index: 50; width: min(calc(100% - 20px), 1180px); display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 10px 10px 22px; background: rgba(109,0,0,.78); border: 1px solid rgba(255,237,168,.28); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border-radius: 999px; box-shadow: 0 18px 40px -24px rgba(26,26,26,.6); animation: areiaIn 1.2s cubic-bezier(.22,.61,.36,1) both;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="areia-butter.svg" alt="Areia Design Studio" style="width: auto; height: 36px; display: block;">
+      <span data-nav-hide="1" style="font-size: 10px; font-weight: 700; letter-spacing: .26em; text-transform: uppercase; color: #FFEDA8;">Areia Design Studio</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <span data-nav-hide="1" style="border: 1px solid rgba(255,237,168,.4); color: #FFEDA8; border-radius: 999px; padding: 8px 14px; font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;">Meta Ads</span>
+      <span data-nav-hide="1" style="border: 1px solid rgba(255,237,168,.4); color: #FFEDA8; border-radius: 999px; padding: 8px 14px; font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;">Panamá</span>
+      <a href="#contacto" style="background: #FFEDA8; color: #6d0000; border-radius: 999px; padding: 11px 20px; font-size: 13px; font-weight: 800; letter-spacing: -.01em; transition: transform .5s cubic-bezier(.22,.61,.36,1);" style-hover="transform: translateY(-2px); color: #6d0000;">Quiero mi campaña</a>
+    </div>
+  </nav>
+
+  <div style="position: relative; max-width: 1360px; margin: 0 auto;">
+
+    <div style="position: absolute; top: clamp(-74px, -6vw, -48px); left: 50%; margin-left: clamp(-56px, -4vw, -40px); width: clamp(80px, 8vw, 112px); height: clamp(190px, 18vw, 260px); border-radius: 999px; overflow: hidden; z-index: 5; box-shadow: 0 30px 50px -18px rgba(26,26,26,.55); animation: areiaFloat 9s ease-in-out infinite;">
+      
+    </div>
+
+    <div style="position: relative; background: #6d0000; border-radius: clamp(32px, 4vw, 56px); padding: clamp(110px, 12vw, 170px) clamp(18px, 5vw, 80px) clamp(40px, 6vw, 80px); display: flex; flex-direction: column; gap: clamp(80px, 11vw, 150px); color: #E4E2DD;">
+
+      <section data-screen-label="01 Hero" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: clamp(24px, 3vw, 36px);">
+        <div style="position: relative; width: min(100%, 820px); height: clamp(130px, 18vw, 250px); border-radius: 999px; overflow: hidden; animation: areiaIn 1.4s .1s cubic-bezier(.22,.61,.36,1) both;">
+          <img data-hero-img="1" src="uploads/Elementos (1).png" alt="" style="position: absolute; left: 0; top: -10%; width: 100%; height: 120%; object-fit: cover; object-position: 50% 42%; display: block;">
+          <span style="position: absolute; top: 0; bottom: 0; left: 0; width: 26%; background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.4), rgba(255,255,255,0)); animation: areiaSweep 7s 1.2s ease-in-out infinite;"></span>
+        </div>
+        <h1 style="margin: 0; max-width: 1000px; font-size: clamp(40px, 7.2vw, 112px); font-weight: 800; line-height: .92; letter-spacing: -.05em; color: #FFEDA8; animation: areiaIn 1.5s .3s cubic-bezier(.22,.61,.36,1) both;">Publicidad que no adivina. <span style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; letter-spacing: -.02em; color: #E4E2DD;">Publicidad que convierte.</span></h1>
+        <p style="margin: 0; max-width: 600px; font-size: clamp(16px, 1.5vw, 21px); line-height: 1.5; color: rgba(228,226,221,.92); animation: areiaIn 1.5s .42s cubic-bezier(.22,.61,.36,1) both;">Diseñamos y gestionamos campañas de Meta Ads con objetivo claro, público correcto y resultados que puedes medir.</p>
+        <a href="#contacto" style="position: relative; overflow: hidden; display: inline-flex; background: #FFEDA8; color: #6d0000; border-radius: 999px; padding: clamp(17px, 1.6vw, 22px) clamp(34px, 3.4vw, 48px); font-size: clamp(16px, 1.4vw, 19px); font-weight: 800; letter-spacing: -.02em; box-shadow: 0 20px 40px -20px rgba(0,0,0,.6); transition: transform .6s cubic-bezier(.22,.61,.36,1); animation: areiaIn 1.5s .54s cubic-bezier(.22,.61,.36,1) both;" style-hover="transform: translateY(-3px); color: #6d0000;">
+          <span style="position: relative; z-index: 2;">Quiero mi campaña</span>
+          <span style="position: absolute; top: 0; bottom: 0; left: 0; width: 34%; background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.7), rgba(255,255,255,0)); animation: areiaSweep 5.6s 2s ease-in-out infinite;"></span>
+        </a>
+        <p style="margin: 0; font-size: 13px; line-height: 1.7; letter-spacing: .02em; color: rgba(228,226,221,.85); animation: areiaIn 1.5s .62s cubic-bezier(.22,.61,.36,1) both;"><strong style="color: #FFEDA8; font-weight: 800; border-bottom: 1px solid #FFEDA8;">Desde $250</strong> · Estrategia + configuración + optimización<br>Pauta se cobra aparte</p>
+      </section>
+
+      <section data-screen-label="02 Problema" data-reveal="1" style="background: #FDF0B5; color: #1A1A1A; border-radius: clamp(28px, 3vw, 40px); padding: clamp(14px, 1.6vw, 22px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(18px, 3vw, 40px); align-items: stretch;">
+        <div style="display: flex; flex-direction: column; justify-content: center; gap: clamp(20px, 2.4vw, 30px); padding: clamp(14px, 3vw, 44px);">
+          <h2 style="margin: 0; font-size: clamp(34px, 4.6vw, 64px); font-weight: 800; line-height: .94; letter-spacing: -.05em;">¿Te suena <span style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; color: #6d0000; letter-spacing: -.015em;">familiar?</span></h2>
+          <div style="display: flex; flex-direction: column; gap: 14px; font-size: clamp(15px, 1.25vw, 17px); line-height: 1.45; letter-spacing: -.01em;">
+            <div style="display: flex; gap: 14px;"><span style="flex: none; font-weight: 800; color: #6d0000;">01</span><span>Intentaste correr un anuncio tú misma y no generó ni una venta</span></div>
+            <div style="display: flex; gap: 14px;"><span style="flex: none; font-weight: 800; color: #6d0000;">02</span><span>Sientes que “boostear” un post no es lo mismo que una campaña real, pero no sabes bien la diferencia</span></div>
+            <div style="display: flex; gap: 14px;"><span style="flex: none; font-weight: 800; color: #6d0000;">03</span><span>Te preocupa invertir en pauta y no saber si ese dinero realmente está funcionando</span></div>
+            <div style="display: flex; gap: 14px;"><span style="flex: none; font-weight: 800; color: #6d0000;">04</span><span>No tienes claro a quién le estás hablando ni si le está llegando a la persona correcta</span></div>
+            <div style="display: flex; gap: 14px;"><span style="flex: none; font-weight: 800; color: #6d0000;">05</span><span>Ves competidores con anuncios todo el tiempo y sientes que te estás quedando atrás</span></div>
+          </div>
+          <p style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: clamp(19px, 1.8vw, 24px); line-height: 1.35; color: #6d0000;">El problema casi nunca es la plataforma. Es lanzar sin estrategia y eso es exactamente lo que no va a pasar aquí.</p>
+        </div>
+        <div style="position: relative; min-height: clamp(380px, 42vw, 600px); border-radius: clamp(22px, 2.4vw, 32px); overflow: hidden;">
+          <img src="uploads/Hero Meta.png" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 18% 50%; display: block;">
+          <a href="#contacto" style="position: absolute; left: 50%; bottom: clamp(16px, 2vw, 28px); transform: translateX(-50%); white-space: nowrap; display: inline-flex; background: rgba(109,0,0,.38); color: #FFEDA8; border: 1px solid rgba(255,237,168,.5); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-radius: 999px; padding: 16px 32px; font-size: 15px; font-weight: 800; letter-spacing: -.01em; box-shadow: inset 0 1px 0 rgba(255,255,255,.3); transition: background .5s ease;" style-hover="background: rgba(109,0,0,.6); color: #FFEDA8;">Quiero mi campaña</a>
+        </div>
+      </section>
+
+      <section data-screen-label="03 Posicionamiento" data-reveal="1" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: clamp(20px, 2.4vw, 30px);">
+        <h2 style="margin: 0; max-width: 900px; font-size: clamp(34px, 5.4vw, 80px); font-weight: 800; line-height: .94; letter-spacing: -.05em; color: #FFEDA8;">No es “subir un anuncio”. Es una estrategia con objetivo.</h2>
+        <div style="max-width: 900px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(16px, 3vw, 48px); text-align: left;">
+          <p style="margin: 0; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.6; color: rgba(228,226,221,.9);">Cualquiera puede darle “promocionar” a un post. Eso no es una campaña, es una apuesta.</p>
+          <p style="margin: 0; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.6; color: rgba(228,226,221,.9);">Una campaña real empieza con un objetivo claro, ¿quieres más alcance, más leads, más ventas? sigue con saber exactamente a quién le estás hablando, y se sostiene con optimización constante, no con “lanzar y esperar”.</p>
+        </div>
+        <p style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: clamp(22px, 2.4vw, 34px); line-height: 1.3; color: #FFEDA8;">Eso es lo que hacemos. Estrategia primero, anuncios después.</p>
+      </section>
+
+      <section data-screen-label="04 Qué incluye" data-reveal="1" style="display: flex; flex-direction: column; align-items: center; gap: clamp(28px, 3.4vw, 44px);">
+        <h2 style="margin: 0; text-align: center; font-size: clamp(34px, 5.4vw, 80px); font-weight: 800; line-height: .94; letter-spacing: -.05em; color: #FFEDA8;">Una campaña completa, <span style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; color: #E4E2DD; letter-spacing: -.015em;">de principio a fin</span></h2>
+        <div style="width: 100%; background: #FDF0B5; color: #1A1A1A; border-radius: clamp(28px, 3vw, 40px); padding: clamp(12px, 1.4vw, 18px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(10px, 1vw, 14px);">
+          <div style="background: #ffffff; border-radius: 26px; padding: clamp(22px, 2.4vw, 32px); display: flex; flex-direction: column; gap: 12px; transition: transform .6s cubic-bezier(.22,.61,.36,1), box-shadow .6s ease;" style-hover="transform: translateY(-4px); box-shadow: 0 24px 40px -26px rgba(109,0,0,.5);"><span style="width: 36px; height: 36px; border-radius: 999px; background: #6d0000; color: #FFEDA8; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800;">01</span><span style="font-size: clamp(18px, 1.6vw, 22px); font-weight: 800; line-height: 1.1; letter-spacing: -.03em;">Definición de objetivos de campaña</span><span style="font-size: 15px; line-height: 1.5; color: rgba(26,26,26,.72);">Sin objetivo claro, no hay forma de medir éxito</span></div>
+          <div style="background: #ffffff; border-radius: 26px; padding: clamp(22px, 2.4vw, 32px); display: flex; flex-direction: column; gap: 12px; transition: transform .6s cubic-bezier(.22,.61,.36,1), box-shadow .6s ease;" style-hover="transform: translateY(-4px); box-shadow: 0 24px 40px -26px rgba(109,0,0,.5);"><span style="width: 36px; height: 36px; border-radius: 999px; background: #6d0000; color: #FFEDA8; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800;">02</span><span style="font-size: clamp(18px, 1.6vw, 22px); font-weight: 800; line-height: 1.1; letter-spacing: -.03em;">Segmentación del público ideal</span><span style="font-size: 15px; line-height: 1.5; color: rgba(26,26,26,.72);">Le hablas a quien realmente puede comprarte, no a todos</span></div>
+          <div style="background: #ffffff; border-radius: 26px; padding: clamp(22px, 2.4vw, 32px); display: flex; flex-direction: column; gap: 12px; transition: transform .6s cubic-bezier(.22,.61,.36,1), box-shadow .6s ease;" style-hover="transform: translateY(-4px); box-shadow: 0 24px 40px -26px rgba(109,0,0,.5);"><span style="width: 36px; height: 36px; border-radius: 999px; background: #6d0000; color: #FFEDA8; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800;">03</span><span style="font-size: clamp(18px, 1.6vw, 22px); font-weight: 800; line-height: 1.1; letter-spacing: -.03em;">Configuración y lanzamiento en Meta Ads</span><span style="font-size: 15px; line-height: 1.5; color: rgba(26,26,26,.72);">Técnicamente bien hecho desde el primer clic</span></div>
+          <div style="background: #ffffff; border-radius: 26px; padding: clamp(22px, 2.4vw, 32px); display: flex; flex-direction: column; gap: 12px; transition: transform .6s cubic-bezier(.22,.61,.36,1), box-shadow .6s ease;" style-hover="transform: translateY(-4px); box-shadow: 0 24px 40px -26px rgba(109,0,0,.5);"><span style="width: 36px; height: 36px; border-radius: 999px; background: #6d0000; color: #FFEDA8; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800;">04</span><span style="font-size: clamp(18px, 1.6vw, 22px); font-weight: 800; line-height: 1.1; letter-spacing: -.03em;">Optimización continua</span><span style="font-size: 15px; line-height: 1.5; color: rgba(26,26,26,.72);">Ajustamos mientras corre, no esperamos a que termine para reaccionar</span></div>
+          <div style="background: #ffffff; border-radius: 26px; padding: clamp(22px, 2.4vw, 32px); display: flex; flex-direction: column; gap: 12px; transition: transform .6s cubic-bezier(.22,.61,.36,1), box-shadow .6s ease;" style-hover="transform: translateY(-4px); box-shadow: 0 24px 40px -26px rgba(109,0,0,.5);"><span style="width: 36px; height: 36px; border-radius: 999px; background: #6d0000; color: #FFEDA8; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800;">05</span><span style="font-size: clamp(18px, 1.6vw, 22px); font-weight: 800; line-height: 1.1; letter-spacing: -.03em;">Análisis de resultados</span><span style="font-size: 15px; line-height: 1.5; color: rgba(26,26,26,.72);">Sabes exactamente qué está funcionando y qué no</span></div>
+          <div style="background: #ffffff; border-radius: 26px; padding: clamp(22px, 2.4vw, 32px); display: flex; flex-direction: column; gap: 12px; transition: transform .6s cubic-bezier(.22,.61,.36,1), box-shadow .6s ease;" style-hover="transform: translateY(-4px); box-shadow: 0 24px 40px -26px rgba(109,0,0,.5);"><span style="width: 36px; height: 36px; border-radius: 999px; background: #6d0000; color: #FFEDA8; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800;">06</span><span style="font-size: clamp(18px, 1.6vw, 22px); font-weight: 800; line-height: 1.1; letter-spacing: -.03em;">Recomendaciones para mejorar el rendimiento</span><span style="font-size: 15px; line-height: 1.5; color: rgba(26,26,26,.72);">La campaña mejora con datos reales, no con suposiciones</span></div>
+        </div>
+        <p style="margin: 0; max-width: 680px; text-align: center; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.55; color: rgba(228,226,221,.92);">El resultado: campañas estratégicas orientadas a resultados medibles, que aprovechan mejor cada dólar invertido. <strong style="color: #FFEDA8; font-weight: 800; border-bottom: 1px solid #FFEDA8;">$250 – $500</strong> · Pauta se cobra aparte</p>
+        <a href="#contacto" style="position: relative; overflow: hidden; display: inline-flex; background: #FFEDA8; color: #6d0000; border-radius: 999px; padding: clamp(17px, 1.6vw, 22px) clamp(34px, 3.4vw, 48px); font-size: clamp(16px, 1.4vw, 19px); font-weight: 800; letter-spacing: -.02em; box-shadow: 0 20px 40px -20px rgba(0,0,0,.6); transition: transform .6s cubic-bezier(.22,.61,.36,1);" style-hover="transform: translateY(-3px); color: #6d0000;">
+          <span style="position: relative; z-index: 2;">Quiero mi campaña</span>
+          <span style="position: absolute; top: 0; bottom: 0; left: 0; width: 34%; background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.7), rgba(255,255,255,0)); animation: areiaSweep 5.6s 1s ease-in-out infinite;"></span>
+        </a>
+      </section>
+
+      <section data-screen-label="05 Proceso" data-reveal="1" style="display: flex; flex-direction: column; align-items: center; gap: clamp(28px, 3.4vw, 44px);">
+        <h2 style="margin: 0; text-align: center; font-size: clamp(34px, 5.4vw, 80px); font-weight: 800; line-height: .94; letter-spacing: -.05em; color: #FFEDA8;">Así de simple es <span style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; color: #E4E2DD; letter-spacing: -.015em;">el proceso</span></h2>
+        <div style="width: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 12px;">
+          <div style="display: flex; flex-direction: column; gap: 16px; background: rgba(255,237,168,.07); border: 1px solid rgba(255,237,168,.22); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 32px; padding: 22px 22px 28px; transition: background .5s ease, transform .6s cubic-bezier(.22,.61,.36,1);" style-hover="background: rgba(255,237,168,.14); transform: translateY(-4px);"><span style="width: 46px; height: 46px; border-radius: 999px; background: #FFEDA8; color: #6d0000; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 18px;">01</span><span style="font-size: 18px; font-weight: 800; line-height: 1.15; letter-spacing: -.03em; color: #FFEDA8;">Reunión inicial</span><span style="font-size: 14px; line-height: 1.5; color: rgba(228,226,221,.88);">entendemos tu negocio y qué objetivo quieres lograr con la campaña</span></div>
+          <div style="display: flex; flex-direction: column; gap: 16px; background: rgba(255,237,168,.07); border: 1px solid rgba(255,237,168,.22); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 32px; padding: 22px 22px 28px; transition: background .5s ease, transform .6s cubic-bezier(.22,.61,.36,1);" style-hover="background: rgba(255,237,168,.14); transform: translateY(-4px);"><span style="width: 46px; height: 46px; border-radius: 999px; background: #FFEDA8; color: #6d0000; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 18px;">02</span><span style="font-size: 18px; font-weight: 800; line-height: 1.15; letter-spacing: -.03em; color: #FFEDA8;">Estrategia y segmentación</span><span style="font-size: 14px; line-height: 1.5; color: rgba(228,226,221,.88);">definimos a quién le hablamos y con qué mensaje</span></div>
+          <div style="display: flex; flex-direction: column; gap: 16px; background: rgba(255,237,168,.07); border: 1px solid rgba(255,237,168,.22); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 32px; padding: 22px 22px 28px; transition: background .5s ease, transform .6s cubic-bezier(.22,.61,.36,1);" style-hover="background: rgba(255,237,168,.14); transform: translateY(-4px);"><span style="width: 46px; height: 46px; border-radius: 999px; background: #FFEDA8; color: #6d0000; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 18px;">03</span><span style="font-size: 18px; font-weight: 800; line-height: 1.15; letter-spacing: -.03em; color: #FFEDA8;">Diseño y configuración</span><span style="font-size: 14px; line-height: 1.5; color: rgba(228,226,221,.88);">creativos y campaña lista en Meta Ads</span></div>
+          <div style="display: flex; flex-direction: column; gap: 16px; background: rgba(255,237,168,.07); border: 1px solid rgba(255,237,168,.22); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 32px; padding: 22px 22px 28px; transition: background .5s ease, transform .6s cubic-bezier(.22,.61,.36,1);" style-hover="background: rgba(255,237,168,.14); transform: translateY(-4px);"><span style="width: 46px; height: 46px; border-radius: 999px; background: #FFEDA8; color: #6d0000; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 18px;">04</span><span style="font-size: 18px; font-weight: 800; line-height: 1.15; letter-spacing: -.03em; color: #FFEDA8;">Lanzamiento y optimización continua</span><span style="font-size: 14px; line-height: 1.5; color: rgba(228,226,221,.88);">ajustamos según el rendimiento real</span></div>
+          <div style="display: flex; flex-direction: column; gap: 16px; background: rgba(255,237,168,.07); border: 1px solid rgba(255,237,168,.22); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 32px; padding: 22px 22px 28px; transition: background .5s ease, transform .6s cubic-bezier(.22,.61,.36,1);" style-hover="background: rgba(255,237,168,.14); transform: translateY(-4px);"><span style="width: 46px; height: 46px; border-radius: 999px; background: #FFEDA8; color: #6d0000; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 18px;">05</span><span style="font-size: 18px; font-weight: 800; line-height: 1.15; letter-spacing: -.03em; color: #FFEDA8;">Análisis de resultados</span><span style="font-size: 14px; line-height: 1.5; color: rgba(228,226,221,.88);">te mostramos qué funcionó y qué sigue</span></div>
+        </div>
+        <p style="margin: 0; text-align: center; font-size: 12px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; color: #FFEDA8;">Estrategia clara desde el primer paso. Sin adivinar.</p>
+      </section>
+
+      <section data-screen-label="06 Objeciones" data-reveal="1" style="background: #FDF0B5; color: #1A1A1A; border-radius: clamp(28px, 3vw, 40px); padding: clamp(28px, 4vw, 64px) clamp(18px, 4vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(24px, 4vw, 64px); align-items: start;">
+        <h2 style="margin: 0; font-size: clamp(32px, 4.2vw, 60px); font-weight: 800; line-height: .94; letter-spacing: -.05em;">Lo que <span style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; color: #6d0000; letter-spacing: -.015em;">seguro</span> te estás preguntando</h2>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="background: #ffffff; border-radius: 26px; padding: 0 22px;">
+            <button type="button" data-faq-btn="1" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: none; border: 0; padding: 20px 0; cursor: pointer; text-align: left; color: #1A1A1A; font-size: clamp(15px, 1.3vw, 18px); font-weight: 800; letter-spacing: -.025em;"><span>¿Por qué la pauta se cobra aparte?</span><span data-faq-icon="1" style="flex: none; width: 32px; height: 32px; border-radius: 999px; background: #6d0000; color: #FFEDA8; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 400; transition: transform .5s cubic-bezier(.22,.61,.36,1);">+</span></button>
+            <div data-faq-panel="1" style="max-height: 0; overflow: hidden; opacity: 0; transition: max-height .7s cubic-bezier(.22,.61,.36,1), opacity .5s ease;"><p style="margin: 0; padding: 0 0 22px; font-size: 15px; line-height: 1.6; color: rgba(26,26,26,.78);">Porque ese dinero va directo a Meta, no a nosotras. Es tu presupuesto de inversión publicitaria, tú decides cuánto quieres invertir según tu objetivo y presupuesto. Nuestro servicio es la estrategia, diseño y gestión de esa campaña.</p></div>
+          </div>
+          <div style="background: #ffffff; border-radius: 26px; padding: 0 22px;">
+            <button type="button" data-faq-btn="1" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: none; border: 0; padding: 20px 0; cursor: pointer; text-align: left; color: #1A1A1A; font-size: clamp(15px, 1.3vw, 18px); font-weight: 800; letter-spacing: -.025em;"><span>¿Y si invierto y no funciona?</span><span data-faq-icon="1" style="flex: none; width: 32px; height: 32px; border-radius: 999px; background: #6d0000; color: #FFEDA8; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 400; transition: transform .5s cubic-bezier(.22,.61,.36,1);">+</span></button>
+            <div data-faq-panel="1" style="max-height: 0; overflow: hidden; opacity: 0; transition: max-height .7s cubic-bezier(.22,.61,.36,1), opacity .5s ease;"><p style="margin: 0; padding: 0 0 22px; font-size: 15px; line-height: 1.6; color: rgba(26,26,26,.78);">Por eso la campaña incluye optimización continua, no la dejamos corriendo sola. Si algo no está dando los resultados esperados, ajustamos mientras avanza, no al final cuando ya se gastó todo.</p></div>
+          </div>
+          <div style="background: #ffffff; border-radius: 26px; padding: 0 22px;">
+            <button type="button" data-faq-btn="1" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: none; border: 0; padding: 20px 0; cursor: pointer; text-align: left; color: #1A1A1A; font-size: clamp(15px, 1.3vw, 18px); font-weight: 800; letter-spacing: -.025em;"><span>¿Cuánto debería invertir en pauta?</span><span data-faq-icon="1" style="flex: none; width: 32px; height: 32px; border-radius: 999px; background: #6d0000; color: #FFEDA8; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 400; transition: transform .5s cubic-bezier(.22,.61,.36,1);">+</span></button>
+            <div data-faq-panel="1" style="max-height: 0; overflow: hidden; opacity: 0; transition: max-height .7s cubic-bezier(.22,.61,.36,1), opacity .5s ease;"><p style="margin: 0; padding: 0 0 22px; font-size: 15px; line-height: 1.6; color: rgba(26,26,26,.78);">Depende de tu objetivo y tu industria. En la reunión inicial te ayudamos a definir un presupuesto realista, no uno inflado ni uno insuficiente para generar resultados.</p></div>
+          </div>
+          <div style="background: #ffffff; border-radius: 26px; padding: 0 22px;">
+            <button type="button" data-faq-btn="1" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: none; border: 0; padding: 20px 0; cursor: pointer; text-align: left; color: #1A1A1A; font-size: clamp(15px, 1.3vw, 18px); font-weight: 800; letter-spacing: -.025em;"><span>¿Ya intenté hacer publicidad y no funcionó, por qué sería diferente ahora?</span><span data-faq-icon="1" style="flex: none; width: 32px; height: 32px; border-radius: 999px; background: #6d0000; color: #FFEDA8; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 400; transition: transform .5s cubic-bezier(.22,.61,.36,1);">+</span></button>
+            <div data-faq-panel="1" style="max-height: 0; overflow: hidden; opacity: 0; transition: max-height .7s cubic-bezier(.22,.61,.36,1), opacity .5s ease;"><p style="margin: 0; padding: 0 0 22px; font-size: 15px; line-height: 1.6; color: rgba(26,26,26,.78);">Porque probablemente lo que corrió fue un “boost” o un anuncio sin segmentación ni objetivo claro. Una campaña estratégica, con público correcto y optimización activa, es un proceso completamente distinto.</p></div>
+          </div>
+          <div style="background: #ffffff; border-radius: 26px; padding: 0 22px;">
+            <button type="button" data-faq-btn="1" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: none; border: 0; padding: 20px 0; cursor: pointer; text-align: left; color: #1A1A1A; font-size: clamp(15px, 1.3vw, 18px); font-weight: 800; letter-spacing: -.025em;"><span>¿Cómo sé que está funcionando?</span><span data-faq-icon="1" style="flex: none; width: 32px; height: 32px; border-radius: 999px; background: #6d0000; color: #FFEDA8; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 400; transition: transform .5s cubic-bezier(.22,.61,.36,1);">+</span></button>
+            <div data-faq-panel="1" style="max-height: 0; overflow: hidden; opacity: 0; transition: max-height .7s cubic-bezier(.22,.61,.36,1), opacity .5s ease;"><p style="margin: 0; padding: 0 0 22px; font-size: 15px; line-height: 1.6; color: rgba(26,26,26,.78);">Recibes análisis de resultados con datos reales. No te quedamos a ciegas esperando a ver si funcionó.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="07 Urgencia" data-reveal="1" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: clamp(20px, 2.4vw, 30px);">
+        <h2 style="margin: 0; max-width: 1000px; font-size: clamp(34px, 5.4vw, 80px); font-weight: 800; line-height: .94; letter-spacing: -.05em; color: #FFEDA8;">Mientras no le hablas a tu público correcto, <span style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; color: #E4E2DD; letter-spacing: -.015em;">alguien más lo está haciendo.</span></h2>
+        <p style="margin: 0; max-width: 680px; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: rgba(228,226,221,.9);">Cada día sin una estrategia de publicidad activa es alcance, leads y ventas que tu competencia sí está capturando. No se trata de gastar más, se trata de invertir con estrategia en lugar de seguir dependiendo solo del alcance orgánico.</p>
+        <div style="position: relative; width: 100%; margin-top: clamp(8px, 1.4vw, 20px); padding-bottom: 30px;">
+          <div style="height: clamp(220px, 32vw, 460px); border-radius: clamp(28px, 3vw, 40px); overflow: hidden; background: #FDF0B5;">
+            <img src="uploads/Elementos (1).png" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block;">
+          </div>
+          <a href="#contacto" style="position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); white-space: nowrap; display: inline-flex; background: rgba(109,0,0,.42); color: #FFEDA8; border: 1px solid rgba(255,237,168,.55); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-radius: 999px; padding: clamp(17px, 1.6vw, 22px) clamp(34px, 3.4vw, 48px); font-size: clamp(16px, 1.4vw, 19px); font-weight: 800; letter-spacing: -.02em; box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 18px 34px -16px rgba(0,0,0,.6); transition: background .5s ease;" style-hover="background: rgba(109,0,0,.7); color: #FFEDA8;">Quiero mi campaña</a>
+        </div>
+      </section>
+
+      <section id="contacto" data-screen-label="08 Cierre" data-reveal="1" style="scroll-margin-top: 110px; background: #FDF0B5; color: #1A1A1A; border-radius: clamp(28px, 3vw, 40px); padding: clamp(30px, 4.4vw, 72px) clamp(20px, 4.4vw, 72px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: clamp(30px, 5vw, 80px); align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: clamp(18px, 2vw, 26px);">
+          <img src="areia-bordeaux.svg" alt="Areia Design Studio" style="width: auto; height: clamp(54px, 5vw, 72px); align-self: flex-start; display: block;">
+          <h2 style="margin: 0; font-size: clamp(32px, 4.2vw, 60px); font-weight: 800; line-height: .94; letter-spacing: -.05em;">Es hora de que tu publicidad trabaje <span style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; color: #6d0000; letter-spacing: -.015em;">con estrategia, no con suerte.</span></h2>
+          <p style="margin: 0; font-size: clamp(16px, 1.5vw, 20px); font-weight: 700; line-height: 1.45; letter-spacing: -.015em; color: #6d0000;">Objetivo claro. Público correcto. Resultados que puedes medir.</p>
+          <p style="margin: 0; font-size: 13px; line-height: 1.7; color: rgba(26,26,26,.65);">Sin compromiso · 30–60 minutos<br>Hablamos de tu objetivo y tu presupuesto</p>
+        </div>
+        <form data-form="1" style="background: #ffffff; border-radius: 32px; padding: clamp(22px, 3vw, 40px); display: flex; flex-direction: column; gap: 12px;">
+          <input name="nombre" type="text" required="required" placeholder="Nombre" style="width: 100%; border: 1px solid rgba(109,0,0,.2); background: #ffffff; border-radius: 999px; padding: 16px 24px; font-size: 16px; color: #1A1A1A;" style-focus="border: 1px solid #6d0000;">
+          <input name="telefono" type="tel" required="required" placeholder="Teléfono" style="width: 100%; border: 1px solid rgba(109,0,0,.2); background: #ffffff; border-radius: 999px; padding: 16px 24px; font-size: 16px; color: #1A1A1A;" style-focus="border: 1px solid #6d0000;">
+          <span style="margin-top: 8px; font-size: 10px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; color: rgba(26,26,26,.6);">¿Cuál es tu objetivo principal?</span>
+          <div data-pillgroup="objetivo" style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <button type="button" data-pill="1" style="border: 1px solid rgba(109,0,0,.4); background: transparent; color: #6d0000; border-radius: 999px; padding: 11px 20px; font-size: 14px; font-weight: 700; cursor: pointer; transition: background .4s ease, color .4s ease;">Más alcance</button>
+            <button type="button" data-pill="1" style="border: 1px solid rgba(109,0,0,.4); background: transparent; color: #6d0000; border-radius: 999px; padding: 11px 20px; font-size: 14px; font-weight: 700; cursor: pointer; transition: background .4s ease, color .4s ease;">Más leads</button>
+            <button type="button" data-pill="1" style="border: 1px solid rgba(109,0,0,.4); background: transparent; color: #6d0000; border-radius: 999px; padding: 11px 20px; font-size: 14px; font-weight: 700; cursor: pointer; transition: background .4s ease, color .4s ease;">Más ventas</button>
+          </div>
+          <span style="margin-top: 8px; font-size: 10px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; color: rgba(26,26,26,.6);">¿HAS PAGADO PUBLICIDAD ANTES?</span>
+          <div data-pillgroup="antes" style="display: flex; gap: 8px;">
+            <button type="button" data-pill="1" style="border: 1px solid rgba(109,0,0,.4); background: transparent; color: #6d0000; border-radius: 999px; padding: 11px 26px; font-size: 14px; font-weight: 700; cursor: pointer; transition: background .4s ease, color .4s ease;">Sí</button>
+            <button type="button" data-pill="1" style="border: 1px solid rgba(109,0,0,.4); background: transparent; color: #6d0000; border-radius: 999px; padding: 11px 26px; font-size: 14px; font-weight: 700; cursor: pointer; transition: background .4s ease, color .4s ease;">No</button>
+          </div>
+          <button type="submit" style="position: relative; overflow: hidden; margin-top: 12px; width: 100%; border: 0; background: #6d0000; color: #FFEDA8; border-radius: 999px; padding: 20px 28px; font-size: 17px; font-weight: 800; letter-spacing: -.02em; cursor: pointer; box-shadow: 0 18px 36px -18px rgba(109,0,0,.8); transition: transform .6s cubic-bezier(.22,.61,.36,1);" style-hover="transform: translateY(-3px);">
+            <span style="position: relative; z-index: 2;">Agenda tu reunión inicial gratuita</span>
+            <span style="position: absolute; top: 0; bottom: 0; left: 0; width: 30%; background: linear-gradient(90deg, rgba(255,237,168,0), rgba(255,237,168,.35), rgba(255,237,168,0)); animation: areiaSweep 6s 2s ease-in-out infinite;"></span>
+          </button>
+          <p data-form-msg="1" style="margin: 0; text-align: center; font-size: 13px; color: #6d0000; opacity: 0; transition: opacity .5s ease;">Gracias. Te escribimos para coordinar la reunión.</p>
+        </form>
+      </section>
+
+      <footer style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; border-top: 1px solid rgba(255,237,168,.18); padding-top: clamp(24px, 3vw, 36px); margin-top: clamp(-40px, -4vw, -20px);">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <img src="areia-butter.svg" alt="Areia Design Studio" style="width: auto; height: 40px; display: block;">
+          <span style="font-size: 10px; font-weight: 700; letter-spacing: .26em; text-transform: uppercase; color: #FFEDA8;">Areia Design Studio</span>
+        </div>
+        <span style="font-size: 10px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: rgba(228,226,221,.75);">Panamá · Meta Ads</span>
+      </footer>
+    </div>
+
+    
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = document.getElementById('dc-root') || document;
+    const items = Array.from(root.querySelectorAll('[data-reveal]'));
+    const vh = window.innerHeight;
+    items.forEach((el) => {
+      if (el.getBoundingClientRect().top < vh * 0.9) return;
+      el.style.opacity = '0';
+      el.style.translate = '0 40px';
+      el.style.transition = 'opacity 1.2s cubic-bezier(.22,.61,.36,1), translate 1.2s cubic-bezier(.22,.61,.36,1)';
+      el.dataset.hidden = '1';
+    });
+    this.io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        if (el.dataset.hidden) { el.style.opacity = '1'; el.style.translate = '0 0'; delete el.dataset.hidden; }
+        this.io.unobserve(el);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    items.forEach((el) => this.io.observe(el));
+
+    const hero = root.querySelector('[data-hero-img]');
+    this.onScroll = () => {
+      const y = window.scrollY || 0;
+      if (hero && y < window.innerHeight * 1.5) hero.style.transform = 'translateY(' + (y * 0.06).toFixed(1) + 'px)';
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    const hides = Array.from(root.querySelectorAll('[data-nav-hide]'));
+    this.onResize = () => { const n = window.innerWidth < 760; hides.forEach((h) => { h.style.display = n ? 'none' : ''; }); };
+    window.addEventListener('resize', this.onResize);
+    this.onResize();
+
+    root.querySelectorAll('[data-faq-btn]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const panel = btn.parentElement.querySelector('[data-faq-panel]');
+        const icon = btn.querySelector('[data-faq-icon]');
+        const open = panel.dataset.open === '1';
+        root.querySelectorAll('[data-faq-panel]').forEach((p) => { p.style.maxHeight = '0px'; p.style.opacity = '0'; p.dataset.open = '0'; });
+        root.querySelectorAll('[data-faq-icon]').forEach((i) => { i.style.transform = 'none'; });
+        if (!open) { panel.style.maxHeight = panel.scrollHeight + 'px'; panel.style.opacity = '1'; panel.dataset.open = '1'; if (icon) icon.style.transform = 'rotate(135deg)'; }
+      });
+    });
+
+    root.querySelectorAll('[data-pillgroup]').forEach((group) => {
+      group.addEventListener('click', (ev) => {
+        const b = ev.target.closest('[data-pill]');
+        if (!b) return;
+        group.querySelectorAll('[data-pill]').forEach((p) => { p.style.background = 'transparent'; p.style.color = '#6d0000'; });
+        b.style.background = '#6d0000';
+        b.style.color = '#FFEDA8';
+      });
+    });
+
+    const form = root.querySelector('[data-form]');
+    if (form) form.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      const msg = root.querySelector('[data-form-msg]');
+      if (msg) msg.style.opacity = '1';
+      form.querySelectorAll('input').forEach((i) => { i.value = ''; });
+    });
+  }
+  componentWillUnmount() {
+    if (this.io) this.io.disconnect();
+    if (this.onScroll) window.removeEventListener('scroll', this.onScroll);
+    if (this.onResize) window.removeEventListener('resize', this.onResize);
+  }
+  renderVals() { return {}; }
+}
+
+</script>
+</body>
+</html>
