@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #1A1A1A; }
+  html { scroll-behavior: smooth; }
+  #contacto input::placeholder, #contacto textarea::placeholder { color: rgba(255,255,255,.75); opacity: 1; }
+  a { color: #FFEDA8; text-decoration: none; }
+  a:hover { color: #ffffff; }
+  ::selection { background: #6d0000; color: #E4E2DD; }
+  @keyframes rise { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes sweep { 0% { transform: translateX(-140%) skewX(-14deg); } 55%, 100% { transform: translateX(360%) skewX(-14deg); } }
+  @keyframes drift { from { transform: scale(1.04); } to { transform: scale(1.12); } }
+  @keyframes floatA { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  @keyframes floatB { 0%, 100% { transform: rotate(-18deg) translateY(0); } 50% { transform: rotate(-18deg) translateY(-10px); } }
+</style>
+</helmet>
+
+<div id="top" style="background:#1A1A1A;color:#ffffff;font-family:'General Sans','Helvetica Neue',Helvetica,sans-serif;letter-spacing:-.01em;overflow-x:hidden">
+
+  <nav style="position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px clamp(18px,3.4vw,54px);background:rgba(26,26,26,.42);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(228,226,221,.12);animation:fade 1.2s ease both">
+    <a href="#top" style="display:block;width:22px;height:50px;background:#D2E8FF;-webkit-mask:url(logo-celeste.svg) center/contain no-repeat;mask:url(logo-celeste.svg) center/contain no-repeat" aria-label="Areia Design Studio"></a>
+    <div style="display:flex;align-items:center;gap:10px">
+      <span style="background:rgba(228,226,221,.14);color:#E4E2DD;border-radius:999px;padding:8px 16px;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase">Panamá</span>
+      <a href="#contacto" style="position:relative;overflow:hidden;display:inline-flex;background:#ffffff;color:#1A1A1A;padding:13px 26px;border-radius:999px;font-size:14px;font-weight:600;letter-spacing:-.02em;transition:transform .5s cubic-bezier(.16,1,.3,1),background .4s ease" style-hover="transform:translateY(-2px);background:#FFEDA8">
+        <span style="position:relative;z-index:1">Quiero renovar mi marca</span>
+        <span style="position:absolute;top:0;left:0;width:34%;height:100%;background:linear-gradient(90deg,transparent,rgba(109,0,0,.14),transparent);animation:sweep 6s ease-in-out infinite"></span>
+      </a>
+    </div>
+  </nav>
+
+  <section data-screen-label="01 Hero" style="position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(130px,18vh,180px) clamp(20px,5vw,84px) clamp(80px,12vh,130px);box-sizing:border-box;background:linear-gradient(180deg,rgba(26,26,26,.6) 0%,rgba(26,26,26,.5) 60%,#1A1A1A 100%),url(hero-rebrand-blur.jpg) center/cover no-repeat #1A1A1A;text-align:center">
+    <div style="width:min(380px,78vw);aspect-ratio:330/190;border-radius:999px;overflow:hidden;box-shadow:0 34px 60px -20px rgba(0,0,0,.6);margin-bottom:clamp(36px,6vh,60px);animation:floatA 7s ease-in-out infinite">
+      <img src="hero-rebrand.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block;animation:drift 18s ease-in-out infinite alternate">
+    </div>
+    <h1 style="margin:0 0 26px;max-width:1000px;font-size:clamp(42px,7vw,104px);line-height:.96;font-weight:700;letter-spacing:-.045em;color:#E4E2DD;text-wrap:balance;animation:rise 1.2s cubic-bezier(.16,1,.3,1) both">Tu marca creció. Es hora de que su imagen también.</h1>
+    <p style="margin:0 auto 14px;max-width:560px;font-size:clamp(16px,1.4vw,19px);line-height:1.5;color:rgba(255,255,255,.88);text-wrap:pretty;animation:rise 1.2s cubic-bezier(.16,1,.3,1) .12s both">Renovamos tu identidad visual sin perder lo que te hace único. Para que tu marca se vea tan actual como el negocio en el que se ha convertido.</p>
+    <p style="margin:0 auto 36px;font-size:clamp(16px,1.4vw,19px);line-height:1.5;color:#ffffff;font-weight:600;animation:rise 1.2s cubic-bezier(.16,1,.3,1) .2s both"><span style="border-bottom:1.5px solid #FFEDA8">Entrega en 7 días · Desde $200</span></p>
+    <a href="#contacto" style="position:relative;overflow:hidden;display:inline-flex;background:#E4E2DD;color:#6d0000;padding:20px 42px;border-radius:999px;font-size:17px;font-weight:600;letter-spacing:-.02em;transition:transform .5s cubic-bezier(.16,1,.3,1),background .4s ease;animation:rise 1.2s cubic-bezier(.16,1,.3,1) .28s both" style-hover="transform:translateY(-2px);background:#ffffff">
+      <span style="position:relative;z-index:1">Quiero renovar mi marca</span>
+      <span style="position:absolute;top:0;left:0;width:34%;height:100%;background:linear-gradient(90deg,transparent,rgba(109,0,0,.14),transparent);animation:sweep 5s ease-in-out infinite"></span>
+    </a>
+  </section>
+
+  <div style="background:linear-gradient(180deg,#1A1A1A 0%,#1A1A1A 18%,#6d0000 42%,#6d0000 86%,#1A1A1A 100%);padding:0 clamp(20px,5vw,84px)">
+    <div style="max-width:1120px;margin:0 auto">
+
+      <section data-screen-label="02 Te suena familiar" style="background:#E4E2DD;color:#1A1A1A;border-radius:40px;padding:clamp(20px,2.4vw,28px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:clamp(20px,3vw,40px);align-items:stretch;animation:rise 1s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% entry 45%">
+        <div style="padding:clamp(12px,2.4vw,32px)">
+          <h2 style="margin:0 0 26px;font-size:clamp(30px,3.6vw,48px);line-height:1;font-weight:700;letter-spacing:-.04em;color:#6d0000">¿Te suena familiar?</h2>
+          <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:26px">
+            <sc-for list="{{ pains }}" as="p" hint-placeholder-count="6">
+              <div style="display:flex;gap:14px;font-size:clamp(15px,1.2vw,17px);line-height:1.45;color:rgba(26,26,26,.86)">
+                <span style="flex:0 0 auto;font-weight:600;color:#6d0000">{{ p.n }}</span>
+                <span style="text-wrap:pretty">{{ p.t }}</span>
+              </div>
+            </sc-for>
+          </div>
+          <div style="font-size:clamp(17px,1.4vw,20px);line-height:1.4;font-weight:600;letter-spacing:-.02em;color:#1A1A1A;text-wrap:pretty">Tu marca ya ha crecido. Ahora es momento de que su imagen crezca con ella.</div>
+        </div>
+        <div style="position:relative;min-height:440px;border-radius:30px;overflow:hidden">
+          <img src="hero-rebrand.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;display:block;animation:drift 20s ease-in-out infinite alternate">
+          <a href="#contacto" style="position:absolute;left:20px;right:20px;bottom:22px;display:flex;justify-content:center;padding:16px 12px;border-radius:999px;background:rgba(26,26,26,.5);border:1px solid rgba(255,255,255,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:#ffffff;font-size:15px;font-weight:600;letter-spacing:-.01em;transition:background .4s ease" style-hover="background:rgba(26,26,26,.65)">Quiero renovar mi marca</a>
+        </div>
+      </section>
+
+      <section data-screen-label="03 Urgencia" style="text-align:center;padding:clamp(90px,14vh,150px) 0 clamp(50px,7vh,70px)">
+        <h2 style="margin:0 auto 24px;max-width:900px;font-size:clamp(34px,4.8vw,66px);line-height:1;font-weight:700;letter-spacing:-.045em;color:#E4E2DD;text-wrap:balance;animation:rise 1s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% entry 55%">Mientras más creces, más se nota la distancia entre tu marca y tu imagen.</h2>
+        <p style="margin:0 auto 8px;max-width:560px;font-size:clamp(16px,1.3vw,18px);line-height:1.5;color:rgba(255,255,255,.88)">Abrimos solo <span style="font-weight:600;color:#ffffff;border-bottom:1.5px solid #FFEDA8">4 rebrandings por mes</span>. $200 – $300 · Entrega en 7 días.</p>
+        <p style="margin:0 auto;max-width:560px;font-size:clamp(16px,1.3vw,18px);line-height:1.5;color:rgba(255,255,255,.88)">La misma esencia. Una imagen renovada. Una marca lista para lo que sigue.</p>
+      </section>
+
+      <div style="position: relative; margin-bottom: clamp(80px,11vh,120px); width: 1098px; height: 468px">
+        <div style="height: 380px; border-radius: 40px; overflow: hidden; background: #dcdcdc; width: 1109px">
+          
+        <img src="hero-rebrand.jpg" alt="" style="width: 1118px; height: 546px; object-fit: cover; object-position: 50% 44%; display: block"></div>
+        <a href="#contacto" style="position:absolute;left:50%;bottom:-30px;transform:translateX(-50%);white-space:nowrap;display:inline-flex;padding:19px 38px;border-radius:999px;background:rgba(26,26,26,.5);border:1px solid rgba(255,255,255,.55);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:#ffffff;font-size:16px;font-weight:600;letter-spacing:-.02em;box-shadow:0 14px 30px -12px rgba(26,26,26,.5)" style-hover="background:rgba(26,26,26,.65)">Agenda tu reunión inicial gratuita</a>
+      </div>
+
+      <section data-screen-label="04 Posicionamiento" style="background:#E4E2DD;color:#1A1A1A;border-radius:40px;padding:clamp(40px,6vw,80px) clamp(24px,6vw,90px);margin-bottom:clamp(60px,9vh,100px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(24px,5vw,70px);animation:rise 1s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+        <h2 style="margin:0;font-size:clamp(30px,3.8vw,52px);line-height:1;font-weight:700;letter-spacing:-.045em;color:#6d0000;text-wrap:balance">Rebranding no significa borrón y cuenta nueva.</h2>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <p style="margin:0;font-size:clamp(15px,1.25vw,18px);line-height:1.6;color:rgba(26,26,26,.82);text-wrap:pretty">Mucha gente le teme a la palabra "rebranding" porque piensa que significa perder todo lo que construyó. No es así, al menos no con nosotras.</p>
+          <p style="margin:0;font-size:clamp(15px,1.25vw,18px);line-height:1.6;color:rgba(26,26,26,.82);text-wrap:pretty">Empezamos analizando qué es lo que ya funciona, lo que tus clientes ya reconocen y valoran, y desde ahí renovamos lo que necesita ponerse al día. El resultado no es una marca nueva. Es la misma marca, llevada a un nuevo nivel.</p>
+        </div>
+      </section>
+
+      <section data-screen-label="05 Qué incluye" style="margin-bottom:clamp(70px,10vh,110px)">
+        <h2 style="margin:0 0 clamp(28px,4vh,44px);text-align:center;font-size:clamp(32px,4.2vw,58px);line-height:1;font-weight:700;letter-spacing:-.045em;color:#E4E2DD;text-wrap:balance">Renovamos con intención, no por cambiar</h2>
+        <div style="border-top:1px solid rgba(255,255,255,.22)">
+          <sc-for list="{{ includes }}" as="row" hint-placeholder-count="5">
+            <div style="display:grid;grid-template-columns:40px minmax(0,1fr) minmax(0,1fr);gap:clamp(12px,3vw,40px);padding:clamp(18px,2.4vw,26px) 0;border-bottom:1px solid rgba(255,255,255,.22);align-items:baseline;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% entry 50%">
+              <span style="font-size:12px;font-weight:600;color:#FFEDA8">{{ row.n }}</span>
+              <span style="font-size:clamp(16px,1.6vw,22px);font-weight:600;letter-spacing:-.025em;color:#ffffff">{{ row.a }}</span>
+              <span style="font-size:clamp(14px,1.15vw,17px);line-height:1.45;color:rgba(255,255,255,.78)">{{ row.b }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <p style="margin:clamp(24px,4vh,36px) 0 0;text-align:center;font-size:clamp(17px,1.6vw,22px);font-weight:600;letter-spacing:-.02em;color:#FFEDA8">El resultado: una marca renovada que conecta mejor con su presente y su futuro.</p>
+      </section>
+
+      <section data-screen-label="06 Proceso" style="margin-bottom:clamp(70px,10vh,110px)">
+        <h2 style="margin:0 0 clamp(28px,4vh,44px);text-align:center;font-size:clamp(32px,4.2vw,58px);line-height:1;font-weight:700;letter-spacing:-.045em;color:#E4E2DD">Así de simple es el proceso</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px">
+          <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+            <div style="background:#E4E2DD;color:#1A1A1A;border-radius:30px;padding:28px 26px 30px;display:flex;flex-direction:column;gap:10px;transition:transform .6s cubic-bezier(.16,1,.3,1);animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% entry 50%" style-hover="transform:translateY(-6px)">
+              <span style="font-size:40px;font-weight:700;letter-spacing:-.05em;color:#6d0000">{{ s.n }}</span>
+              <span style="font-size:19px;font-weight:600;letter-spacing:-.025em">{{ s.t }}</span>
+              <span style="font-size:14.5px;line-height:1.5;color:rgba(26,26,26,.75)">{{ s.d }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <p style="margin:clamp(22px,3.5vh,32px) 0 0;text-align:center;font-size:clamp(16px,1.4vw,19px);font-weight:600;color:#FFEDA8">7 días hábiles de principio a fin. Sin letra pequeña.</p>
+      </section>
+
+      <section data-screen-label="07 Objeciones" style="background:#E4E2DD;color:#1A1A1A;border-radius:40px;padding:clamp(34px,5vw,64px) clamp(24px,5vw,70px) clamp(24px,3vw,40px);margin-bottom:clamp(70px,10vh,110px)">
+        <h2 style="margin:0 0 16px;text-align:center;font-size:clamp(28px,3.4vw,46px);font-weight:700;letter-spacing:-.045em;color:#6d0000">Lo que suelen preguntarnos</h2>
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="4">
+          <div style="border-bottom:1px solid rgba(26,26,26,.16)">
+            <button type="button" onClick="{{ f.toggle }}" style="width:100%;background:none;border:0;padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;text-align:left;font-family:inherit;font-size:clamp(16px,1.4vw,20px);font-weight:600;letter-spacing:-.025em;color:#1A1A1A">
+              <span>{{ f.q }}</span>
+              <span style="{{ f.plusStyle }}">+</span>
+            </button>
+            <div style="{{ f.panelStyle }}">
+              <p style="margin:0 0 22px;max-width:760px;font-size:clamp(14.5px,1.2vw,17px);line-height:1.6;color:rgba(26,26,26,.78)">{{ f.a }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </section>
+
+      <section id="contacto" data-screen-label="08 Formulario" style="padding:0 0 clamp(80px,12vh,130px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:clamp(36px,6vw,90px);align-items:start;scroll-margin-top:100px">
+        <div>
+          <h2 style="margin:0 0 18px;font-size:clamp(34px,4.4vw,62px);line-height:.98;font-weight:700;letter-spacing:-.045em;color:#E4E2DD;text-wrap:balance">Agenda tu reunión inicial gratuita</h2>
+          <p style="margin:0 0 22px;font-size:clamp(16px,1.4vw,20px);line-height:1.5;color:rgba(255,255,255,.88);text-wrap:pretty">Tu marca ya recorrió un camino. Ahora que se le note.</p>
+          <p style="margin:0;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#FFEDA8">Sin compromiso · 30–60 minutos · Te escuchamos primero</p>
+        </div>
+        <form onSubmit="{{ onSubmit }}" style="display:flex;flex-direction:column;gap:12px">
+          <input type="text" placeholder="Nombre" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:17px 26px;font-family:inherit;font-size:15px;color:#ffffff;outline:none" style-focus="border-color:#FFEDA8">
+          <input type="text" placeholder="Negocio" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:17px 26px;font-family:inherit;font-size:15px;color:#ffffff;outline:none" style-focus="border-color:#FFEDA8">
+          <input type="text" placeholder="¿Cuánto tiempo lleva tu marca actual?" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:17px 26px;font-family:inherit;font-size:15px;color:#ffffff;outline:none" style-focus="border-color:#FFEDA8">
+          <textarea rows="3" placeholder="¿Qué sientes que ya no representa tu identidad actual?" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.4);border-radius:26px;padding:17px 26px;font-family:inherit;font-size:15px;color:#ffffff;outline:none;resize:vertical" style-focus="border-color:#FFEDA8"></textarea>
+          <textarea rows="2" placeholder="Otro detalle" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.4);border-radius:26px;padding:17px 26px;font-family:inherit;font-size:15px;color:#ffffff;outline:none;resize:vertical" style-focus="border-color:#FFEDA8"></textarea>
+          <button type="submit" style="position:relative;overflow:hidden;margin-top:8px;align-self:flex-start;background:#E4E2DD;color:#6d0000;border:0;border-radius:999px;padding:20px 40px;font-family:inherit;font-size:16px;font-weight:600;letter-spacing:-.02em;cursor:pointer;transition:transform .5s cubic-bezier(.16,1,.3,1),background .4s ease" style-hover="transform:translateY(-2px);background:#ffffff">
+            <span style="position:relative;z-index:1">{{ submitLabel }}</span>
+            <span style="position:absolute;top:0;left:0;width:34%;height:100%;background:linear-gradient(90deg,transparent,rgba(109,0,0,.14),transparent);animation:sweep 5s ease-in-out infinite"></span>
+          </button>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <footer data-screen-label="09 Pie de página" style="position:relative;background:#1A1A1A;padding:clamp(40px,6vh,70px) clamp(20px,5vw,84px) clamp(60px,9vh,100px)">
+    <div style="position:relative;max-width:1120px;margin:0 auto;background:#E4E2DD;color:#1A1A1A;border-radius:40px;padding:clamp(40px,6vw,64px) 30px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px">
+      <div style="width:34px;height:80px;background:#6d0000;-webkit-mask:url(logo-celeste.svg) center/contain no-repeat;mask:url(logo-celeste.svg) center/contain no-repeat"></div>
+      <div style="font-size:13px;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:#6d0000">Panamá</div>
+      <div style="font-size:15px;color:rgba(26,26,26,.75)">© 2026 Areia Design Studio — Diseño con propósito.</div>
+      <div style="position:absolute;right:clamp(-20px,-1vw,0px);top:-60px;width:clamp(160px,20vw,260px);aspect-ratio:300/118;border-radius:999px;overflow:hidden;box-shadow:0 30px 50px -20px rgba(0,0,0,.55);animation:floatB 8s ease-in-out infinite">
+        <img src="hero-rebrand.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 60%;display:block">
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { open: 0, sent: false };
+  renderVals() {
+    const faqs = [
+      { q: "¿Y si mis clientes ya no me reconocen después del cambio?", a: "Por eso empezamos con un análisis de tu identidad actual, el objetivo nunca es que dejen de reconocerte, es que te vean como realmente eres hoy, con más claridad, no menos." },
+      { q: "¿No es arriesgado cambiar algo que ya funciona?", a: "Rediseñar no es empezar de cero. Es ajustar lo que ya no comunica bien, manteniendo lo que sí. El riesgo real está en quedarte con una imagen que ya no representa la calidad de tu trabajo." },
+      { q: "¿Cómo sé que van a respetar la esencia de mi marca?", a: "Porque antes de transformar su imagen, entendemos qué la hace única. Analizamos tu identidad actual, lo que ya funciona y aquello que quieres proyectar, para construir una nueva dirección visual que conserve su esencia y la lleve hacia donde quieres." },
+      { q: "¿Y si no me gusta la nueva dirección?", a: "Incluye 2 rondas de revisión antes de la entrega final. Nada se vuelve definitivo sin que tú lo apruebes." }
+    ].map((f, i) => {
+      const o = this.state.open === i;
+      return { ...f,
+        plusStyle: "flex:0 0 auto;width:36px;height:36px;border:1px solid rgba(26,26,26,.25);border-radius:999px;display:grid;place-items:center;font-size:17px;font-weight:400;transition:transform .5s cubic-bezier(.16,1,.3,1);transform:rotate(" + (o ? 135 : 0) + "deg)",
+        panelStyle: "overflow:hidden;transition:max-height .6s cubic-bezier(.16,1,.3,1),opacity .4s ease;max-height:" + (o ? "300px" : "0px") + ";opacity:" + (o ? 1 : 0),
+        toggle: () => this.setState(s => ({ open: s.open === i ? -1 : i }))
+      };
+    });
+    return {
+      faqs,
+      submitLabel: this.state.sent ? "Gracias, te escribimos pronto" : "Agenda tu reunión inicial gratuita",
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      includes: [
+        { n: "01", a: "Análisis de tu identidad actual", b: "Empezamos entendiendo qué vale la pena conservar" },
+        { n: "02", a: "Rediseño de la línea visual", b: "Una imagen coherente con el negocio que eres hoy" },
+        { n: "03", a: "Actualización de colores y tipografías", b: "Modernos, pero fieles a tu esencia original" },
+        { n: "04", a: "Adaptación para medios digitales", b: "Lista para verse bien en redes, web y donde la necesites" },
+        { n: "05", a: "Nueva dirección estética", b: "Una guía clara de hacia dónde va tu marca de ahora en adelante" }
+      ],
+      steps: [
+        { n: "01", t: "Reunión inicial", d: "30–60 min, sin costo — entendemos tu marca actual y hacia dónde quieres llevarla" },
+        { n: "02", t: "Análisis de identidad", d: "Identificamos qué conservar y qué renovar" },
+        { n: "03", t: "Rediseño de línea visual", d: "Nueva dirección estética, colores y tipografías" },
+        { n: "04", t: "Revisión y entrega final", d: "Hasta 2 rondas de ajustes incluidas" }
+      ],
+      pains: [
+        { n: "01", t: "Tu negocio ya no es el mismo que cuando creaste tu logo o tus colores pero tu imagen sigue igual" },
+        { n: "02", t: "Sientes que tu marca \"se quedó\" mientras tú seguiste evolucionando" },
+        { n: "03", t: "Miras tu identidad visual y piensa \"esto ya no me representa\"" },
+        { n: "04", t: "Te da un poco de miedo cambiar, porque no quieres perder a quienes ya te conocen así" },
+        { n: "05", t: "Clientes nuevos te ven y no perciben el nivel real de lo que ofreces" },
+        { n: "06", t: "Sientes que tu marca podría comunicar mucho más, pero no sabes como llevarla al segundo nivel" }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
