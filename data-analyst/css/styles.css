@@ -50,7 +50,7 @@ strong{font-weight:800}
 .hero-content h2{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(30px,5.2vw,72px);line-height:1.14;letter-spacing:-.02em;color:var(--cream);text-shadow:0 20px 60px rgba(0,0,0,.55);max-width:835px;margin:0 auto}
 
 /* Paper / wine */
-.outer{padding:clamp(130px,14vw,180px) clamp(12px,3vw,32px) clamp(120px,14vw,180px)}
+.outer{overflow-x:clip;padding:clamp(130px,14vw,180px) clamp(12px,3vw,32px) clamp(120px,14vw,180px)}
 .paper{position:relative;max-width:1360px;margin:0 auto;background:var(--cream);border-radius:clamp(36px,5vw,64px);padding:clamp(60px,7vw,96px) clamp(12px,3vw,56px) clamp(80px,9vw,130px)}
 .wine{position:relative;background:var(--bordeaux);border-radius:clamp(30px,4.4vw,56px);padding:clamp(26px,3.4vw,44px) clamp(20px,5vw,80px) clamp(40px,5vw,70px)}
 .wine-bar{display:flex;align-items:center;justify-content:space-between;gap:16px}
@@ -148,7 +148,7 @@ strong{font-weight:800}
 .form-card{margin:clamp(40px,5vw,64px) auto 0;max-width:1000px;background:var(--cream);color:var(--ink);border-radius:clamp(28px,3vw,40px);padding:clamp(30px,4vw,60px) clamp(20px,5vw,72px);text-align:left}
 .form-card h3{text-align:center;font-size:clamp(24px,3.2vw,44px);line-height:1.02;font-weight:800;letter-spacing:-.05em;color:var(--bordeaux)}
 .form-card-sub{margin:16px 0 34px;text-align:center;font-size:clamp(14px,1.3vw,18px);line-height:1.5;color:rgba(26,26,26,.7)}
-.contact-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;transition:opacity .4s}
+.contact-form{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;transition:opacity .4s}
 .contact-form.is-leaving{opacity:0}
 .field{display:flex;flex-direction:column;gap:6px}
 .field label{font-size:12px;font-weight:600;letter-spacing:-.01em;color:rgba(26,26,26,.6);padding-left:18px}
@@ -189,3 +189,7 @@ strong{font-weight:800}
 .float-cta{position:fixed;right:18px;bottom:18px;z-index:55;padding:15px 24px;border-radius:999px;background:var(--cream);color:var(--bordeaux);font-size:14px;font-weight:800;letter-spacing:-.02em;box-shadow:0 16px 36px -14px rgba(0,0,0,.6);opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .4s,transform .4s var(--ease),background .3s}
 .float-cta.is-visible{opacity:1;transform:none;pointer-events:auto}
 .float-cta:hover{background:var(--butter)}
+
+@media (max-width:640px){.contact-form{grid-template-columns:1fr}}
+@media (min-width:701px){.wine-foot{padding-right:clamp(90px,9vw,140px)}}
+html,body{overflow-x:clip}
