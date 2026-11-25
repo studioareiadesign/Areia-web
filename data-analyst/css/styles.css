@@ -32,7 +32,7 @@ strong{font-weight:800}
 .bg-tint{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,26,26,.55),rgba(109,0,0,.38) 45%,rgba(26,26,26,.7))}
 
 /* Header */
-.site-header{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px clamp(20px,4vw,64px);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:linear-gradient(to bottom,rgba(26,26,26,.42),rgba(26,26,26,0))}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px clamp(20px,4vw,64px);background:linear-gradient(to bottom,rgba(26,26,26,.5),rgba(26,26,26,0))}
 .brand{display:flex;align-items:center;gap:14px}
 .brand-logo{height:34px;width:auto}
 .brand-name{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(228,226,221,.72);font-weight:500}
